@@ -24,9 +24,9 @@ export default function Hero() {
                         <span className="inline-block py-2 px-4 rounded-full bg-abic-blue/5 border border-abic-blue/10 text-abic-blue text-sm font-bold tracking-widest mb-6">
                             EXCEPTIONAL SERVICE & SUPPORT
                         </span>
-                        <h1 className="text-5xl md:text-6xl font-montserrat font-extrabold text-abic-blue leading-tight mb-6 h-[3.5em] md:h-[3em]">
+                        <h1 className="text-5xl md:text-6xl font-montserrat font-extrabold text-abic-blue leading-tight mb-6">
                             Your Trusted <br />
-                            <span className="text-abic-red">
+                            <span className="text-abic-red block min-h-[1.2em]">
                                 <TypeAnimation
                                     sequence={[
                                         'Gateway to Canada',

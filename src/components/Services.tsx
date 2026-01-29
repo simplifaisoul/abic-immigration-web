@@ -72,7 +72,7 @@ export default function Services() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[250px]">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
