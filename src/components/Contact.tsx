@@ -80,6 +80,21 @@ export default function Contact() {
                     </div>
 
                 </div>
+
+                {/* Google Maps Integration */}
+                <div className="mt-16 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                    <iframe
+                        width="100%"
+                        height="450"
+                        id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=1550%20South%20Gateway%20Rd%20Mississauga%20ON&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                        frameBorder="0"
+                        scrolling="no"
+                        marginHeight={0}
+                        marginWidth={0}
+                        className="grayscale hover:grayscale-0 transition-all duration-500"
+                    ></iframe>
+                </div>
             </div>
         </section>
     )

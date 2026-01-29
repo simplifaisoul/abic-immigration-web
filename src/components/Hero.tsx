@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import CountUp from "react-countup";
-import Tilt from "react-parallax-tilt";
 import { TypeAnimation } from 'react-type-animation';
+import Globe3D from './Globe3D';
 
 export default function Hero() {
     return (
@@ -90,19 +90,9 @@ export default function Hero() {
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="relative hidden md:block"
+                    className="relative hidden md:flex items-center justify-center"
                 >
-                    <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} transitionSpeed={2500}>
-                        <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white max-w-md mx-auto">
-                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Toronto Skyline" className="w-full h-auto object-cover" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-abic-blue/80 to-transparent flex items-end p-8">
-                                <div className="text-white">
-                                    <p className="font-bold text-lg">Headquartered in Mississauga, ON</p>
-                                    <p className="text-sm opacity-80">Serving clients worldwide since 1997</p>
-                                </div>
-                            </div>
-                        </div>
-                    </Tilt>
+                    <Globe3D />
 
                     {/* Decorative Elements */}
                     <div className="absolute -z-10 top-10 -right-10 w-72 h-72 bg-abic-gold/20 rounded-full blur-3xl"></div>
