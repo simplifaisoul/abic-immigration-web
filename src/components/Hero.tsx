@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import CountUp from "react-countup";
+import Tilt from "react-parallax-tilt";
 
 export default function Hero() {
     return (
@@ -49,16 +51,19 @@ export default function Hero() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5 }}
-                        className="pt-8 flex items-center gap-8 text-sm font-medium text-gray-500"
+                        className="pt-8 flex flex-wrap items-center gap-8 text-sm font-medium text-gray-500"
                     >
                         <div className="flex items-center gap-2">
-                            <CheckCircle2 className="text-abic-gold" size={18} /> RCIC Licensed
+                            <CheckCircle2 className="text-abic-gold" size={18} />
+                            <span>RCIC Licensed</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <CheckCircle2 className="text-abic-gold" size={18} /> 98% Success Rate
+                            <CheckCircle2 className="text-abic-gold" size={18} />
+                            <span><CountUp end={98} duration={2.5} />% Success Rate</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <CheckCircle2 className="text-abic-gold" size={18} /> Global Offices
+                            <CheckCircle2 className="text-abic-gold" size={18} />
+                            <span>Global Offices</span>
                         </div>
                     </motion.div>
                 </div>
@@ -70,15 +75,17 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                     className="relative hidden md:block"
                 >
-                    <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white max-w-md mx-auto transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Toronto Skyline" className="w-full h-auto object-cover" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-abic-blue/80 to-transparent flex items-end p-8">
-                            <div className="text-white">
-                                <p className="font-bold text-lg">Headquartered in Mississauga, ON</p>
-                                <p className="text-sm opacity-80">Serving clients worldwide since 1997</p>
+                    <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} transitionSpeed={2500}>
+                        <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white max-w-md mx-auto">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Toronto Skyline" className="w-full h-auto object-cover" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-abic-blue/80 to-transparent flex items-end p-8">
+                                <div className="text-white">
+                                    <p className="font-bold text-lg">Headquartered in Mississauga, ON</p>
+                                    <p className="text-sm opacity-80">Serving clients worldwide since 1997</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </Tilt>
 
                     {/* Decorative Elements */}
                     <div className="absolute -z-10 top-10 -right-10 w-72 h-72 bg-abic-gold/20 rounded-full blur-3xl"></div>

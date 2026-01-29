@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
+import Tilt from "react-parallax-tilt";
 
 const TESTIMONIALS = [
     {
@@ -41,19 +42,23 @@ export default function Testimonials() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ delay: i * 0.1 }}
                             viewport={{ once: true }}
-                            className="flex-shrink-0 w-full md:w-[400px] bg-white p-8 rounded-2xl shadow-lg border border-gray-100 relative snap-center group hover:shadow-2xl transition-all"
+                            className="flex-shrink-0 w-full md:w-[400px] snap-center"
                         >
-                            <Quote className="absolute top-8 right-8 text-abic-gold/20 h-12 w-12 group-hover:text-abic-gold/40 transition-colors" />
-                            <p className="text-gray-600 mb-6 leading-relaxed italic relative z-10">"{t.text}"</p>
-                            <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 bg-abic-blue text-white rounded-full flex items-center justify-center font-bold text-xl">
-                                    {t.name[0]}
+                            <Tilt tiltMaxAngleX={3} tiltMaxAngleY={3} scale={1.02} className="h-full">
+                                <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 relative group hover:shadow-2xl transition-all h-full">
+                                    <Quote className="absolute top-8 right-8 text-abic-gold/20 h-12 w-12 group-hover:text-abic-gold/40 transition-colors" />
+                                    <p className="text-gray-600 mb-6 leading-relaxed italic relative z-10">"{t.text}"</p>
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-12 h-12 bg-abic-blue text-white rounded-full flex items-center justify-center font-bold text-xl">
+                                            {t.name[0]}
+                                        </div>
+                                        <div>
+                                            <h4 className="font-bold text-abic-blue">{t.name}</h4>
+                                            <p className="text-xs text-gray-500 uppercase tracking-wider">{t.role}</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4 className="font-bold text-abic-blue">{t.name}</h4>
-                                    <p className="text-xs text-gray-500 uppercase tracking-wider">{t.role}</p>
-                                </div>
-                            </div>
+                            </Tilt>
                         </motion.div>
                     ))}
                 </div>
