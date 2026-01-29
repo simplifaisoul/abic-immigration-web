@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import CountUp from "react-countup";
 import Tilt from "react-parallax-tilt";
+import { TypeAnimation } from 'react-type-animation';
 
 export default function Hero() {
     return (
@@ -23,9 +24,25 @@ export default function Hero() {
                         <span className="inline-block py-2 px-4 rounded-full bg-abic-blue/5 border border-abic-blue/10 text-abic-blue text-sm font-bold tracking-widest mb-6">
                             EXCEPTIONAL SERVICE & SUPPORT
                         </span>
-                        <h1 className="text-5xl md:text-6xl font-montserrat font-extrabold text-abic-blue leading-tight mb-6">
+                        <h1 className="text-5xl md:text-6xl font-montserrat font-extrabold text-abic-blue leading-tight mb-6 h-[3.5em] md:h-[3em]">
                             Your Trusted <br />
-                            <span className="text-abic-red">Gateway to Canada</span>
+                            <span className="text-abic-red">
+                                <TypeAnimation
+                                    sequence={[
+                                        'Gateway to Canada',
+                                        2000,
+                                        'Partner for Visa',
+                                        2000,
+                                        'Path to PR',
+                                        2000,
+                                        'Immigration Expert',
+                                        2000
+                                    ]}
+                                    wrapper="span"
+                                    speed={50}
+                                    repeat={Infinity}
+                                />
+                            </span>
                         </h1>
                         <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
                             Authorized representation for Express Entry, Study Visas, and Family Sponsorship.
