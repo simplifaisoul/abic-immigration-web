@@ -4,6 +4,8 @@ import TextureOverlay from "./components/TextureOverlay";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import BookConsultation from "./pages/BookConsultation";
+import Contact from "./pages/Contact"; // NEW
+import ServicesOverview from "./pages/ServicesOverview"; // NEW
 import ExpressEntry from "./pages/ExpressEntry";
 import PRCitizenship from "./pages/PRCitizenship";
 import FamilySponsorship from "./pages/FamilySponsorship";
@@ -11,7 +13,6 @@ import EmployersLMIA from "./pages/EmployersLMIA";
 import WorkPermit from "./pages/WorkPermit";
 import EOOffice from "./pages/EOOffice";
 import Resources from "./pages/Resources";
-import PlaceholderPage from "./pages/Placeholder";
 import VisitorVisaApplication from "./pages/visitor/Application";
 import VisitorVisaExtension from "./pages/visitor/Extension";
 import VisitorVisaRefusals from "./pages/visitor/Refusals";
@@ -65,13 +66,16 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
 
-          {/* Temporary / Other Aliases for new Nav items */}
+          {/* Sub Pages */}
           <Route path="/why-choose-abic" element={<About />} />
-          <Route path="/services-overview" element={<Home />} />
+          <Route path="/services-overview" element={<ServicesOverview />} />
           <Route path="/about/credentials" element={<About />} />
           <Route path="/about/verify-status" element={<About />} />
           <Route path="/about/reviews" element={<About />} />
           <Route path="/about/ethics" element={<About />} />
+
+          {/* Contact */}
+          <Route path="/contact" element={<Contact />} />
 
           {/* Services */}
           {/* Services - Visitor Visa */}
@@ -139,9 +143,6 @@ function App() {
           <Route path="/resources" element={<Resources />} />
           <Route path="/e-office" element={<EOOffice />} />
           <Route path="/book-consultation" element={<BookConsultation />} />
-
-          {/* Fallback */}
-          <Route path="/contact" element={<PlaceholderPage title="Contact Us" />} />
         </Routes>
       </main>
 
