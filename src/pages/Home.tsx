@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2, Globe, GraduationCap, Users } from "lucide-react";
+import { ArrowRight, Globe, GraduationCap, Users } from "lucide-react";
 import GlobeHero from "../components/GlobeHero";
 import VideoTestimonials from "../components/VideoTestimonials";
 

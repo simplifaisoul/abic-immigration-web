@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function GlobeHero() {
-    const globeEl = useRef<any>();
+    const globeEl = useRef<any>(null);
     const [dimensions, setDimensions] = useState({ width: window.innerWidth, height: window.innerHeight });
 
     useEffect(() => {

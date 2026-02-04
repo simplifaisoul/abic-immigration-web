@@ -1,5 +1,5 @@
 import ServiceLayout from "../components/ServiceLayout";
-import { MapPin, School, BookOpen, Clock, Briefcase } from "lucide-react";
+import { MapPin, School, Clock, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function StudentsGuelph() {

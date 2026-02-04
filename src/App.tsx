@@ -9,8 +9,6 @@ import PRCitizenship from "./pages/PRCitizenship";
 import FamilySponsorship from "./pages/FamilySponsorship";
 import EmployersLMIA from "./pages/EmployersLMIA";
 import WorkPermit from "./pages/WorkPermit";
-import StudentsWaterloo from "./pages/StudentsWaterloo";
-import StudentsGuelph from "./pages/StudentsGuelph";
 import EOOffice from "./pages/EOOffice";
 import Resources from "./pages/Resources";
 import PlaceholderPage from "./pages/Placeholder";

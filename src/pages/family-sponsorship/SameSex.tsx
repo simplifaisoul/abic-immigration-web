@@ -1,5 +1,4 @@
 import ServiceLayout from "../../components/ServiceLayout";
-import { Link } from "react-router-dom";
 import { Users } from "lucide-react";
 
 export default function SameSex() {

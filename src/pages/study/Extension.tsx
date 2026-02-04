@@ -1,6 +1,5 @@
 import ServiceLayout from "../../components/ServiceLayout";
-import { AlertCircle, Clock } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Clock } from "lucide-react";
 
 export default function StudyExtension() {
     return (

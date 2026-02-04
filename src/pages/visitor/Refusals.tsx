@@ -1,5 +1,5 @@
 import ServiceLayout from "../../components/ServiceLayout";
-import { ArrowRight, FileSearch, XCircle, RefreshCw } from "lucide-react";
+import { FileSearch, XCircle, RefreshCw } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function VisitorVisaRefusals() {

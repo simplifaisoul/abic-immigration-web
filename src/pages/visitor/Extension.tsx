@@ -1,5 +1,5 @@
 import ServiceLayout from "../../components/ServiceLayout";
-import { ArrowRight, Calendar, AlertCircle } from "lucide-react";
+import { AlertCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function VisitorVisaExtension() {

@@ -1,5 +1,5 @@
 import ServiceLayout from "../components/ServiceLayout";
-import { GraduationCap, BookOpen, AlertCircle, FileCheck, ArrowRight, Clock } from "lucide-react";
+import { GraduationCap, AlertCircle, FileCheck, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function StudyInCanada() {

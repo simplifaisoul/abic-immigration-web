@@ -1,6 +1,5 @@
 import ServiceLayout from "../../components/ServiceLayout";
 import { Link } from "react-router-dom";
-import { Map } from "lucide-react";
 
 export default function PR() {
     return (

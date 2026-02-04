@@ -1,6 +1,5 @@
 import ServiceLayout from "../../components/ServiceLayout";
-import { Link } from "react-router-dom";
-import { Briefcase, Clock, AlertTriangle } from "lucide-react";
+import { AlertTriangle } from "lucide-react";
 
 export default function WorkPermitOverview() {
     return (

@@ -1,5 +1,5 @@
 import ServiceLayout from "../../components/ServiceLayout";
-import { GraduationCap, Briefcase } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 
 export default function PGWP() {
     return (

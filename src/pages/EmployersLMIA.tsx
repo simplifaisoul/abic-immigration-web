@@ -1,5 +1,5 @@
 import ServiceLayout from "../components/ServiceLayout";
-import { Briefcase, FileText, CheckSquare, Search } from "lucide-react";
+import { Briefcase, CheckSquare, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function EmployersLMIA() {
