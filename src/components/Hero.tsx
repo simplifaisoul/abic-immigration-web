@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import CountUp from "react-countup";
-import { TypeAnimation } from 'react-type-animation';
 import Globe3D from './Globe3D';
 
 export default function Hero() {
@@ -22,31 +21,16 @@ export default function Hero() {
                         transition={{ duration: 0.6 }}
                     >
                         <span className="inline-block py-2 px-4 rounded-full bg-abic-blue/5 border border-abic-blue/10 text-abic-blue text-sm font-bold tracking-widest mb-6">
-                            EXCEPTIONAL SERVICE & SUPPORT
+                            CLEAR. STRATEGIC. COMPLIANCE-FIRST.
                         </span>
-                        <h1 className="text-5xl md:text-6xl font-montserrat font-extrabold text-abic-blue leading-tight mb-6">
-                            Your Trusted <br />
+                        <h1 className="text-4xl md:text-5xl font-montserrat font-extrabold text-abic-blue leading-tight mb-6">
+                            Regulated Canadian <br />
                             <span className="text-abic-red block min-h-[1.2em]">
-                                <TypeAnimation
-                                    sequence={[
-                                        'Gateway to Canada',
-                                        2000,
-                                        'Partner for Visa',
-                                        2000,
-                                        'Path to PR',
-                                        2000,
-                                        'Immigration Expert',
-                                        2000
-                                    ]}
-                                    wrapper="span"
-                                    speed={50}
-                                    repeat={Infinity}
-                                />
+                                Immigration Advice
                             </span>
                         </h1>
                         <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
-                            Authorized representation for Express Entry, Study Visas, and Family Sponsorship.
-                            Led by <strong>Anthony Wai Kean Cheah</strong> (RCIC, M.Sc.).
+                            Helping students, families, skilled workers, and employers navigate Canadian immigration with clarity and professional standards.
                         </p>
                     </motion.div>
 
@@ -56,11 +40,11 @@ export default function Hero() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="flex flex-col sm:flex-row gap-4"
                     >
-                        <a href="#assessment" className="px-8 py-4 bg-abic-blue text-white font-bold rounded shadow-xl hover:bg-abic-blue/90 transition-all flex items-center justify-center gap-2 group">
-                            Begin Assessment <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                        <a href="/book-consultation" className="px-8 py-4 bg-abic-red text-white font-bold rounded shadow-xl hover:bg-red-700 transition-all flex items-center justify-center gap-2 group">
+                            Book a Consultation <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                         </a>
                         <a href="#services" className="px-8 py-4 bg-white border border-gray-200 text-abic-blue font-bold rounded shadow-lg hover:shadow-xl transition-all flex items-center justify-center">
-                            Our Services
+                            Explore Services
                         </a>
                     </motion.div>
 

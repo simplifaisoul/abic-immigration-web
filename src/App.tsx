@@ -1,12 +1,60 @@
+import { Routes, Route } from "react-router-dom";
 import { Header, Footer } from "./components/Layout";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import AssessmentWizard from "./components/AssessmentWizard";
-import ProcessTimeline from "./components/ProcessTimeline";
-import Testimonials from "./components/Testimonials";
-import Contact from "./components/Contact";
 import TextureOverlay from "./components/TextureOverlay";
-import { MessageSquare, Calendar } from "lucide-react";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import BookConsultation from "./pages/BookConsultation";
+import ExpressEntry from "./pages/ExpressEntry";
+import PRCitizenship from "./pages/PRCitizenship";
+import FamilySponsorship from "./pages/FamilySponsorship";
+import EmployersLMIA from "./pages/EmployersLMIA";
+import WorkPermit from "./pages/WorkPermit";
+import StudentsWaterloo from "./pages/StudentsWaterloo";
+import StudentsGuelph from "./pages/StudentsGuelph";
+import EOOffice from "./pages/EOOffice";
+import Resources from "./pages/Resources";
+import PlaceholderPage from "./pages/Placeholder";
+import VisitorVisaApplication from "./pages/visitor/Application";
+import VisitorVisaExtension from "./pages/visitor/Extension";
+import VisitorVisaRefusals from "./pages/visitor/Refusals";
+import StudyApplication from "./pages/study/Application";
+import StudyExtension from "./pages/study/Extension";
+import StudyRefusals from "./pages/study/Refusals";
+
+import WaterlooOverview from "./pages/students-waterloo/Overview";
+import WaterlooPGWP from "./pages/students-waterloo/PGWP";
+import WaterlooStudyPermit from "./pages/students-waterloo/StudyPermit";
+import WaterlooExtension from "./pages/students-waterloo/Extension";
+import WaterlooWorkWhileStudying from "./pages/students-waterloo/WorkWhileStudying";
+import WaterlooRefusals from "./pages/students-waterloo/Refusals";
+import WaterlooLocalSupport from "./pages/students-waterloo/LocalSupport";
+
+import GuelphOverview from "./pages/students-guelph/Overview";
+import GuelphStudyPermit from "./pages/students-guelph/StudyPermit";
+import GuelphExtension from "./pages/students-guelph/Extension";
+import GuelphPGWP from "./pages/students-guelph/PGWP";
+import GuelphWorkWhileStudying from "./pages/students-guelph/WorkWhileStudying";
+import GuelphRefusals from "./pages/students-guelph/Refusals";
+import GuelphLocalSupport from "./pages/students-guelph/LocalSupport";
+
+import WorkPermitOverview from "./pages/work-permit/Overview";
+import WorkPermitExtension from "./pages/work-permit/Extension";
+import PGWP from "./pages/work-permit/PGWP";
+
+import FSW from "./pages/express-entry/FSW";
+import CEC from "./pages/express-entry/CEC";
+import FST from "./pages/express-entry/FST";
+
+import PR from "./pages/pr-citizenship/PR";
+import Citizenship from "./pages/pr-citizenship/Citizenship";
+
+import SpousalSponsorship from "./pages/family-sponsorship/Spousal";
+import CommonLaw from "./pages/family-sponsorship/CommonLaw";
+import SameSex from "./pages/family-sponsorship/SameSex";
+
+import LMIA from "./pages/employers/LMIA";
+import Recruitment from "./pages/employers/Recruitment";
+import EmployerCompliance from "./pages/employers/Compliance";
 
 function App() {
   return (
@@ -15,58 +63,88 @@ function App() {
       <Header />
 
       <main>
-        <Hero />
-        <Services />
-        <AssessmentWizard />
-        <ProcessTimeline />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
 
-        {/* About Section / Founder Bio */}
-        <section className="py-24 bg-gray-900 text-white relative overflow-hidden" id="about">
-          <div className="absolute top-0 right-0 w-1/3 h-full bg-abic-blue/20 rotate-12 transform translate-x-1/2"></div>
+          {/* Temporary / Other Aliases for new Nav items */}
+          <Route path="/why-choose-abic" element={<About />} />
+          <Route path="/services-overview" element={<Home />} />
+          <Route path="/about/credentials" element={<About />} />
+          <Route path="/about/verify-status" element={<About />} />
+          <Route path="/about/reviews" element={<About />} />
+          <Route path="/about/ethics" element={<About />} />
 
-          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
-            <div>
-              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Professional Immigration Consultant" className="rounded-lg shadow-2xl filter sepia-[.20]" />
-              <div className="absolute -bottom-6 -right-6 bg-abic-gold text-black p-6 rounded-lg shadow-xl hidden md:block">
-                <p className="font-bold text-xl">25+ Years</p>
-                <p className="text-sm opacity-80">Of Excellence</p>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-abic-gold font-bold tracking-widest uppercase mb-2 text-sm">Leadership</h2>
-              <h3 className="text-4xl font-montserrat font-bold mb-6">About Anthony Wai Kean Cheah</h3>
-              <div className="space-y-4 text-gray-300 leading-relaxed">
-                <p>
-                  Anthony W.K. Cheah is a <strong>Regulated Canadian Immigration Consultant (RCIC)</strong> and Commissioner of Oaths, recognized for his expertise in both Canada and Malaysia.
-                </p>
-                <p>
-                  With a comprehensive educational background including an M.Sc. in Accounting (USA) and B.Sc. in Computer Science (USA), Anthony brings a strategic, analytical approach to immigration cases.
-                </p>
-                <ul className="space-y-2 mt-4">
-                  <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-abic-gold rounded-full"></div> PME Committee Member of ICCRC</li>
-                  <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-abic-gold rounded-full"></div> Vice President of EBIA (Excel Beyond International Academy)</li>
-                  <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-abic-gold rounded-full"></div> Who’s Who of American Business Leaders Award Recipient</li>
-                </ul>
-                <div className="pt-8 flex gap-4">
-                  <a href="#contact" className="px-8 py-3 bg-abic-blue text-white rounded font-bold hover:bg-blue-900 transition-colors">Book a Meeting</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+          {/* Services */}
+          {/* Services - Visitor Visa */}
+          <Route path="/visitor-visa/application" element={<VisitorVisaApplication />} />
+          <Route path="/visitor-visa/extension" element={<VisitorVisaExtension />} />
+          <Route path="/visitor-visa/refusals" element={<VisitorVisaRefusals />} />
+          <Route path="/visitor-visa" element={<VisitorVisaApplication />} />
 
-        <Testimonials />
-        <Contact />
+          {/* Services - Study */}
+          <Route path="/study-in-canada/application" element={<StudyApplication />} />
+          <Route path="/study-in-canada/extension" element={<StudyExtension />} />
+          <Route path="/study-in-canada/refusals" element={<StudyRefusals />} />
+          <Route path="/study-in-canada" element={<StudyApplication />} />
 
-        {/* Floating CTA */}
-        <div className="fixed bottom-8 right-8 z-40 flex flex-col gap-4">
-          <a href="tel:+14163338110" className="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform">
-            <MessageSquare />
-          </a>
-          <a href="#assessment" className="w-14 h-14 bg-abic-red rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform">
-            <Calendar />
-          </a>
-        </div>
+          {/* Services - Work */}
+          <Route path="/work-permit/overview" element={<WorkPermitOverview />} />
+          <Route path="/work-permit/extension" element={<WorkPermitExtension />} />
+          <Route path="/work-permit/pgwp" element={<PGWP />} />
+          <Route path="/work-permit" element={<WorkPermit />} />
+
+          {/* Services - Express Entry */}
+          <Route path="/express-entry/fsw" element={<FSW />} />
+          <Route path="/express-entry/cec" element={<CEC />} />
+          <Route path="/express-entry/fst" element={<FST />} />
+          <Route path="/express-entry" element={<ExpressEntry />} />
+
+          {/* Services - PR & Citizenship */}
+          <Route path="/pr-citizenship/pr" element={<PR />} />
+          <Route path="/pr-citizenship/citizenship" element={<Citizenship />} />
+          <Route path="/pr-citizenship" element={<PRCitizenship />} />
+
+          {/* Services - Family */}
+          <Route path="/family-sponsorship/spousal" element={<SpousalSponsorship />} />
+          <Route path="/family-sponsorship/common-law" element={<CommonLaw />} />
+          <Route path="/family-sponsorship/same-sex" element={<SameSex />} />
+          <Route path="/family-sponsorship" element={<FamilySponsorship />} />
+
+          {/* Services - Employer */}
+          <Route path="/employers-lmia/process" element={<LMIA />} />
+          <Route path="/employers-lmia/recruitment" element={<Recruitment />} />
+          <Route path="/employers-lmia/compliance" element={<EmployerCompliance />} />
+          <Route path="/employers-lmia" element={<EmployersLMIA />} />
+
+          {/* Students - Waterloo */}
+          <Route path="/students/waterloo/overview" element={<WaterlooOverview />} />
+          <Route path="/students/waterloo/study-permit" element={<WaterlooStudyPermit />} />
+          <Route path="/students/waterloo/extension" element={<WaterlooExtension />} />
+          <Route path="/students/waterloo/pgwp" element={<WaterlooPGWP />} />
+          <Route path="/students/waterloo/work-while-studying" element={<WaterlooWorkWhileStudying />} />
+          <Route path="/students/waterloo/refusals" element={<WaterlooRefusals />} />
+          <Route path="/students/waterloo/local-support" element={<WaterlooLocalSupport />} />
+          <Route path="/students/waterloo" element={<WaterlooOverview />} />
+
+          {/* Students - Guelph */}
+          <Route path="/students/guelph/overview" element={<GuelphOverview />} />
+          <Route path="/students/guelph/study-permit" element={<GuelphStudyPermit />} />
+          <Route path="/students/guelph/extension" element={<GuelphExtension />} />
+          <Route path="/students/guelph/pgwp" element={<GuelphPGWP />} />
+          <Route path="/students/guelph/work-while-studying" element={<GuelphWorkWhileStudying />} />
+          <Route path="/students/guelph/refusals" element={<GuelphRefusals />} />
+          <Route path="/students/guelph/local-support" element={<GuelphLocalSupport />} />
+          <Route path="/students/guelph" element={<GuelphOverview />} />
+
+          {/* Other */}
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/e-office" element={<EOOffice />} />
+          <Route path="/book-consultation" element={<BookConsultation />} />
+
+          {/* Fallback */}
+          <Route path="/contact" element={<PlaceholderPage title="Contact Us" />} />
+        </Routes>
       </main>
 
       <Footer />

@@ -1,5 +1,29 @@
 @import "tailwindcss";
 
+/* Google Translate Customization */
+.goog-te-gadget-simple {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  font-size: 12px !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value {
+  color: inherit !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value span {
+  border-left: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.goog-te-banner-frame {
+  display: none !important;
+}
+
 @theme {
   --color-abic-red: #C41230;
   --color-abic-blue: #003366;
