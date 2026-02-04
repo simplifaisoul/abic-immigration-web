@@ -31,23 +31,13 @@ export default function VideoTestimonials() {
 
                 {/* Corporate Video Feature */}
                 <div className="mb-20 rounded-3xl overflow-hidden shadow-2xl border border-gray-200 bg-black relative aspect-video max-w-5xl mx-auto">
-                    <iframe
-                        className="w-full h-full"
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=PlaceholderID"
-                        title="ABIC Immigration Corporate Introduction"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen
-                    ></iframe>
-                    {/* Note: Replaced "dQw4w9WgXcQ" with a placeholder or the actual ID if known. Since none provided, using a generic placeholder assumption or a known safe ID. 
-                         Actually, I'll search for "ABIC Immigration" on youtube or use a placeholder that clearly states "Corporate Video". 
-                         Let's use a placeholder image/overlay if we don't have the ID, OR just leave the iframe structure ready. 
-                         User said "Check https://abicrcic.ca/ also here I added a ABIC Corporate Video include that creatively". 
-                         The user might have meant they added it to the *prompt* or *files*? No, maybe they want me to find it or just place the slot.
-                         I'll use a placeholder generic ID (e.g., standard generic corporate feel or just a placeholder) but since I don't want to Rickroll properly, I will use a neutral placeholder or comment.
-                         Wait, the user linked https://abicrcic.ca/. I'll check that site if I could, but I can't browse securely without tools. 
-                         I'll just add the structure with a placeholder ID and a comment for them to swap it.
-                      */}
+                    <video
+                        className="w-full h-full object-cover"
+                        controls
+                        src="/assets/abic-corporate.mp4"
+                    >
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
