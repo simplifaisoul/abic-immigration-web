@@ -2,10 +2,17 @@ import { Routes, Route } from "react-router-dom";
 import { Header, Footer } from "./components/Layout";
 import TextureOverlay from "./components/TextureOverlay";
 import Home from "./pages/Home";
-import About from "./pages/About";
+// import About from "./pages/About"; // Keep for legacy /about root if needed, or redirect
 import BookConsultation from "./pages/BookConsultation";
-import Contact from "./pages/Contact"; // NEW
-import ServicesOverview from "./pages/ServicesOverview"; // NEW
+import Contact from "./pages/Contact";
+import ServicesOverview from "./pages/ServicesOverview";
+// NEW About Sub-pages
+import OurPractice from "./pages/about/OurPractice";
+import Credentials from "./pages/about/Credentials";
+import VerifyStatus from "./pages/about/VerifyStatus";
+import Reviews from "./pages/about/Reviews";
+import Ethics from "./pages/about/Ethics";
+
 import ExpressEntry from "./pages/ExpressEntry";
 import PRCitizenship from "./pages/PRCitizenship";
 import FamilySponsorship from "./pages/FamilySponsorship";
@@ -64,15 +71,17 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<OurPractice />} />
 
           {/* Sub Pages */}
-          <Route path="/why-choose-abic" element={<About />} />
+          <Route path="/why-choose-abic" element={<OurPractice />} />
           <Route path="/services-overview" element={<ServicesOverview />} />
-          <Route path="/about/credentials" element={<About />} />
-          <Route path="/about/verify-status" element={<About />} />
-          <Route path="/about/reviews" element={<About />} />
-          <Route path="/about/ethics" element={<About />} />
+
+          {/* About Us granular routes */}
+          <Route path="/about/credentials" element={<Credentials />} />
+          <Route path="/about/verify-status" element={<VerifyStatus />} />
+          <Route path="/about/reviews" element={<Reviews />} />
+          <Route path="/about/ethics" element={<Ethics />} />
 
           {/* Contact */}
           <Route path="/contact" element={<Contact />} />
