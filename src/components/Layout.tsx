@@ -94,10 +94,6 @@ export const Header = () => {
                             <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-abic-gold transition-all duration-300 group-hover:w-full ${location.pathname === link.path ? "w-full" : ""} `}></span>
                         </Link>
                     ))}
-                    {/* CICC Badge in Header */}
-                    <div className="ml-4 pl-4 border-l border-gray-200">
-                        <CICCBadge size="sm" variant="subtle" />
-                    </div>
                     <Link to="/contact" className="bg-abic-blue text-white px-6 py-2.5 rounded-full font-bold hover:bg-abic-blue/90 text-sm shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
                         Book Consultation
                     </Link>
