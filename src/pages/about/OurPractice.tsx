@@ -30,6 +30,11 @@ export default function OurPractice() {
                             <p className="text-sm text-gray-500">RCIC (R511743)</p>
                             <p className="text-xs text-gray-400 mt-2 uppercase tracking-wide">Principal Consultant & Director</p>
                         </div>
+
+                        {/* CICC Badge - Immediate Credibility */}
+                        <div className="mt-6 flex justify-center">
+                            <img src="/assets/cicc-logo-new.png" alt="CICC Regulated" className="h-20 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+                        </div>
                     </div>
 
                     {/* Content */}
