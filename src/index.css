@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./premium-animations.css";
 
 /* Google Translate Customization */
 .goog-te-gadget-simple {

@@ -1,11 +1,11 @@
 import ServiceLayout from "../components/ServiceLayout";
 import { Shield, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
-import React from "react";
+import CICCBadge from "../components/CICCBadge";
 
 // Sub-components
 const ConsultationCard = ({ title, price, children, btnText, btnLink }: { title: string, price: string, children: React.ReactNode, btnText: string, btnLink: string }) => (
-    <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-lg hover:shadow-2xl transition-all relative overflow-hidden group">
+    <div className="card-lift bg-white p-8 rounded-3xl border border-gray-100 shadow-lg hover:shadow-2xl transition-all relative overflow-hidden group">
         <div className={`absolute top-0 left-0 w-full h-2 ${title.includes("Online") ? "bg-abic-blue" : "bg-abic-gold"}`}></div>
         <h3 className="text-2xl font-bold text-gray-900 mb-2">{title}</h3>
         <div className={`text-4xl font-bold mb-6 ${title.includes("Online") ? "text-abic-blue" : "text-abic-gold"}`}>{price} <span className="text-lg text-gray-400 font-normal">/ 60 mins</span></div>
@@ -34,12 +34,17 @@ export default function Fees() {
             subtitle="Transparent pricing for regulated Canadian immigration expertise."
             heroImage="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=2000"
         >
-            <div className="space-y-20">
+            <div className="space-y-24">
+
+                {/* CICC Badge - Credibility */}
+                <div className="flex justify-center mb-8">
+                    <CICCBadge size="lg" showLabel />
+                </div>
 
                 <section>
-                    <div className="text-center max-w-3xl mx-auto mb-12">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Step 1: The Consultation</h2>
-                        <p className="text-gray-600">Every successful application starts with a proper assessment. Choose the consultation that fits your needs.</p>
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <h2 className="text-4xl font-bold text-gray-900 mb-6 tracking-tight">Step 1: The Consultation</h2>
+                        <p className="text-lg text-gray-600 leading-relaxed">Every successful application starts with a proper assessment. Choose the consultation that fits your needs.</p>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -70,14 +75,14 @@ export default function Fees() {
                 </section>
 
                 <section>
-                    <div className="text-center max-w-3xl mx-auto mb-12">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Professional Service Fees</h2>
-                        <p className="text-gray-600">Estimates for full representation. Final quotes provided after consultation based on complexity.</p>
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <h2 className="text-4xl font-bold text-gray-900 mb-6 tracking-tight">Professional Service Fees</h2>
+                        <p className="text-lg text-gray-600 leading-relaxed">Estimates for full representation. Final quotes provided after consultation based on complexity.</p>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {/* Temporary Residence */}
-                        <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl border-2 border-blue-100 shadow-lg hover:shadow-xl transition-all">
+                        <div className="card-lift bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl border-2 border-blue-100 shadow-lg hover:shadow-xl transition-all">
                             <div className="bg-abic-blue text-white py-2 px-4 rounded-lg mb-6 text-center font-bold">
                                 Temporary Residence
                             </div>

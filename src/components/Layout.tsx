@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Facebook, Instagram, Twitter, Linkedin, Youtube, Phone, Mail, MapPin, ExternalLink } from "lucide-react";
+import CICCBadge from "./CICCBadge";
 import { AnimatePresence, motion } from "framer-motion";
 
 // --- TOP UTILITY BAR ---
@@ -69,7 +70,7 @@ export const Header = () => {
     ];
 
     return (
-        <nav className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md shadow-md py-2" : "bg-white py-4"}`}>
+        <nav className={`sticky top - 0 z - 50 transition - all duration - 300 ${scrolled ? "bg-white/95 backdrop-blur-md shadow-md py-2" : "bg-white py-4"} `}>
             <div className="container mx-auto px-4 flex justify-between items-center">
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-3 group">
@@ -82,7 +83,7 @@ export const Header = () => {
                         <Link
                             key={link.name}
                             to={link.path}
-                            className={`relative text-sm uppercase tracking-wide hover:text-abic-blue transition-colors group ${location.pathname === link.path ? "text-abic-blue font-bold" : ""}`}
+                            className={`relative text-sm uppercase tracking-wide hover:text-abic-blue transition-colors group ${location.pathname === link.path ? "text-abic-blue font-bold" : ""} `}
                         >
                             {link.name}
                             {link.label && (
@@ -90,9 +91,13 @@ export const Header = () => {
                                     {link.label}
                                 </span>
                             )}
-                            <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-abic-gold transition-all duration-300 group-hover:w-full ${location.pathname === link.path ? "w-full" : ""}`}></span>
+                            <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-abic-gold transition-all duration-300 group-hover:w-full ${location.pathname === link.path ? "w-full" : ""} `}></span>
                         </Link>
                     ))}
+                    {/* CICC Badge in Header */}
+                    <div className="ml-4 pl-4 border-l border-gray-200">
+                        <CICCBadge size="sm" variant="subtle" />
+                    </div>
                     <Link to="/contact" className="bg-abic-blue text-white px-6 py-2.5 rounded-full font-bold hover:bg-abic-blue/90 text-sm shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
                         Book Consultation
                     </Link>
@@ -146,6 +151,8 @@ export const Footer = () => (
                     <p className="text-sm leading-relaxed max-w-xs">
                         Regulated Canadian Immigration Consultants (RCIC). Providing ethical, accurate, and compliance-driven immigration strategies since 2017.
                     </p>
+                    {/* CICC Badge */}
+                    <CICCBadge size="md" showLabel variant="grayscale" />
                     <div className="flex space-x-4">
                         <a href="#" className="hover:text-white transition-colors"><Facebook size={20} /></a>
                         <a href="#" className="hover:text-white transition-colors"><Instagram size={20} /></a>
