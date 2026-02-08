@@ -33,7 +33,7 @@ export default function OurPractice() {
 
                         {/* CICC Badge - Immediate Credibility */}
                         <div className="mt-6 flex justify-center">
-                            <img src="/assets/cicc-logo-new.png" alt="CICC Regulated" className="h-20 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+                            <img src="/assets/cicc-logo-new.png" alt="CICC Regulated" className="h-32 object-contain opacity-90 hover:opacity-100 transition-opacity" />
                         </div>
                     </div>
 
