@@ -1,85 +1,177 @@
 import ServiceLayout from "../components/ServiceLayout";
-import { HelpCircle, Book, FileWarning, Briefcase } from "lucide-react";
+import { Book, FileText, TrendingUp, MapPin, AlertCircle } from "lucide-react";
 
 export default function Resources() {
     return (
         <ServiceLayout
-            title="Knowledge Hub"
-            subtitle="Expert guides, FAQs, and resources to help you understand Canadian immigration."
+            title="Resources"
+            subtitle="Educational information to help you understand Canadian immigration programs and processes."
             heroImage="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
         >
-            <div className="space-y-12">
+            <div className="space-y-16">
 
-                {/* FAQs */}
+                {/* Immigration Guides & FAQs */}
                 <section>
-                    <div className="flex items-center gap-3 mb-6">
-                        <HelpCircle className="text-abic-blue" size={28} />
-                        <h2 className="text-2xl font-bold text-gray-900">Immigration FAQs</h2>
+                    <div className="flex items-center gap-3 mb-8">
+                        <Book className="text-abic-blue" size={32} />
+                        <h2 className="text-3xl font-bold text-gray-900">Immigration Guides & FAQs</h2>
                     </div>
-                    <div className="grid gap-4">
-                        <details className="bg-gray-50 p-4 rounded-lg cursor-pointer group">
-                            <summary className="font-bold text-gray-800 list-none flex justify-between items-center">
-                                How much funds do I need for Express Entry?
-                                <span className="group-open:rotate-180 transition-transform">▼</span>
-                            </summary>
-                            <p className="mt-3 text-gray-600 pl-4 border-l-2 border-abic-gold">
-                                For a single applicant (FSW), you generally need around $14,690 CAD (updated annually). CEC applicants who are currently working in Canada do not need to show proof of funds.
-                            </p>
-                        </details>
-                        <details className="bg-gray-50 p-4 rounded-lg cursor-pointer group">
-                            <summary className="font-bold text-gray-800 list-none flex justify-between items-center">
-                                Can I sponsor my brother or sister?
-                                <span className="group-open:rotate-180 transition-transform">▼</span>
-                            </summary>
-                            <p className="mt-3 text-gray-600 pl-4 border-l-2 border-abic-gold">
-                                Generally, no. Sibling sponsorship is only possible in very specific "Lonely Canadian" situations (e.g., they are orphaned, under 18, and related by blood).
-                            </p>
-                        </details>
-                    </div>
-                </section>
 
-                {/* Guides */}
-                <section>
-                    <div className="flex items-center gap-3 mb-6">
-                        <Book className="text-abic-gold" size={28} />
-                        <h2 className="text-2xl font-bold text-gray-900">Guides</h2>
-                    </div>
-                    <div className="grid md:grid-cols-2 gap-6">
-                        <div className="border border-gray-200 p-6 rounded-xl hover:shadow-md transition-shadow">
-                            <h3 className="font-bold text-lg mb-2">Express Entry Explained</h3>
-                            <p className="text-sm text-gray-500 mb-4">A deep dive into the CRS point system and how to improve your score.</p>
-                            <a href="#" className="text-abic-blue font-bold text-sm hover:underline">Read Guide &rarr;</a>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="bg-white p-6 rounded-xl border-2 border-gray-100 hover:border-abic-blue transition-all">
+                            <h3 className="font-bold text-lg text-gray-900 mb-3">Visitor Visa Guide</h3>
+                            <p className="text-sm text-gray-600 mb-4">Educational overview – content to be provided by ABIC team.</p>
+                            <div className="text-abic-blue text-sm font-semibold">Coming Soon</div>
                         </div>
-                        <div className="border border-gray-200 p-6 rounded-xl hover:shadow-md transition-shadow">
-                            <h3 className="font-bold text-lg mb-2">Student Immigration Guide</h3>
-                            <p className="text-sm text-gray-500 mb-4">From Study Permit to PGWP to PR. The complete roadmap for international students.</p>
-                            <a href="#" className="text-abic-blue font-bold text-sm hover:underline">Read Guide &rarr;</a>
+
+                        <div className="bg-white p-6 rounded-xl border-2 border-gray-100 hover:border-abic-blue transition-all">
+                            <h3 className="font-bold text-lg text-gray-900 mb-3">Study Permit Guide</h3>
+                            <p className="text-sm text-gray-600 mb-4">Educational overview – content to be provided by ABIC team.</p>
+                            <div className="text-abic-blue text-sm font-semibold">Coming Soon</div>
+                        </div>
+
+                        <div className="bg-white p-6 rounded-xl border-2 border-gray-100 hover:border-abic-blue transition-all">
+                            <h3 className="font-bold text-lg text-gray-900 mb-3">Work Permit Guide</h3>
+                            <p className="text-sm text-gray-600 mb-4">Educational overview – content to be provided by ABIC team.</p>
+                            <div className="text-abic-blue text-sm font-semibold">Coming Soon</div>
+                        </div>
+
+                        <div className="bg-white p-6 rounded-xl border-2 border-gray-100 hover:border-abic-blue transition-all">
+                            <h3 className="font-bold text-lg text-gray-900 mb-3">Express Entry Guide</h3>
+                            <p className="text-sm text-gray-600 mb-4">Educational overview – content to be provided by ABIC team.</p>
+                            <div className="text-abic-blue text-sm font-semibold">Coming Soon</div>
+                        </div>
+
+                        <div className="bg-white p-6 rounded-xl border-2 border-gray-100 hover:border-abic-blue transition-all">
+                            <h3 className="font-bold text-lg text-gray-900 mb-3">Family Sponsorship Guide</h3>
+                            <p className="text-sm text-gray-600 mb-4">Educational overview – content to be provided by ABIC team.</p>
+                            <div className="text-abic-blue text-sm font-semibold">Coming Soon</div>
+                        </div>
+
+                        <div className="bg-white p-6 rounded-xl border-2 border-gray-100 hover:border-abic-blue transition-all">
+                            <h3 className="font-bold text-lg text-gray-900 mb-3">LMIA Guide</h3>
+                            <p className="text-sm text-gray-600 mb-4">Educational overview – content to be provided by ABIC team.</p>
+                            <div className="text-abic-blue text-sm font-semibold">Coming Soon</div>
                         </div>
                     </div>
                 </section>
 
-                {/* Employers */}
-                <section>
-                    <div className="flex items-center gap-3 mb-6">
-                        <Briefcase className="text-abic-blue" size={28} />
-                        <h2 className="text-2xl font-bold text-gray-900">Employer Hiring Guides</h2>
+                {/* IRCC Information */}
+                <section className="bg-gradient-to-br from-blue-50 to-white p-10 rounded-3xl border-2 border-blue-100">
+                    <div className="flex items-center gap-3 mb-8">
+                        <FileText className="text-abic-blue" size={32} />
+                        <h2 className="text-3xl font-bold text-gray-900">IRCC Information</h2>
                     </div>
-                    <p className="text-gray-700 mb-4">
-                        Resources for Canadian employers looking to hire foreign talent. Understanding LMIA requirements and exemption codes.
+
+                    <p className="text-gray-700 mb-6">Key IRCC topics and requirements for immigration applicants:</p>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div className="bg-white p-4 rounded-lg border border-blue-200">
+                            <div className="font-semibold text-gray-800">Processing times</div>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg border border-blue-200">
+                            <div className="font-semibold text-gray-800">Biometrics requirements</div>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg border border-blue-200">
+                            <div className="font-semibold text-gray-800">Medical examinations</div>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg border border-blue-200">
+                            <div className="font-semibold text-gray-800">Police certificates</div>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg border border-blue-200">
+                            <div className="font-semibold text-gray-800">VAC / passport submission</div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Express Entry */}
+                <section>
+                    <div className="flex items-center gap-3 mb-8">
+                        <TrendingUp className="text-green-600" size={32} />
+                        <h2 className="text-3xl font-bold text-gray-900">Express Entry</h2>
+                    </div>
+
+                    <p className="text-gray-700 mb-8">
+                        Express Entry is Canada's flagship immigration system for skilled workers. Below are recent draw results for reference.
                     </p>
+
+                    <div className="overflow-x-auto bg-white rounded-2xl border-2 border-gray-100 shadow-lg">
+                        <table className="w-full">
+                            <thead>
+                                <tr className="bg-gradient-to-r from-abic-blue to-blue-600 text-white">
+                                    <th className="px-6 py-4 text-left font-bold">Date</th>
+                                    <th className="px-6 py-4 text-left font-bold">Type</th>
+                                    <th className="px-6 py-4 text-left font-bold">CRS Score</th>
+                                    <th className="px-6 py-4 text-left font-bold">ITAs</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                    <td className="px-6 py-4 text-gray-800">2025-01-15</td>
+                                    <td className="px-6 py-4">
+                                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">General</span>
+                                    </td>
+                                    <td className="px-6 py-4 font-bold text-abic-blue">524</td>
+                                    <td className="px-6 py-4 text-gray-800">5,500</td>
+                                </tr>
+                                <tr className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                    <td className="px-6 py-4 text-gray-800">2025-01-08</td>
+                                    <td className="px-6 py-4">
+                                        <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">PNP</span>
+                                    </td>
+                                    <td className="px-6 py-4 font-bold text-abic-blue">739</td>
+                                    <td className="px-6 py-4 text-gray-800">1,000</td>
+                                </tr>
+                                <tr className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                    <td className="px-6 py-4 text-gray-800">2024-12-18</td>
+                                    <td className="px-6 py-4">
+                                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">General</span>
+                                    </td>
+                                    <td className="px-6 py-4 font-bold text-abic-blue">529</td>
+                                    <td className="px-6 py-4 text-gray-800">5,000</td>
+                                </tr>
+                                <tr className="hover:bg-gray-50 transition-colors">
+                                    <td className="px-6 py-4 text-gray-800">2024-12-04</td>
+                                    <td className="px-6 py-4">
+                                        <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">CEC</span>
+                                    </td>
+                                    <td className="px-6 py-4 font-bold text-abic-blue">511</td>
+                                    <td className="px-6 py-4 text-gray-800">4,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </section>
 
-                {/* Mistakes */}
-                <section>
-                    <div className="flex items-center gap-3 mb-6">
-                        <FileWarning className="text-abic-red" size={28} />
-                        <h2 className="text-2xl font-bold text-gray-900">Common Immigration Mistakes</h2>
+                {/* Provincial Nominee Programs */}
+                <section className="bg-gradient-to-br from-amber-50 to-white p-10 rounded-3xl border-2 border-amber-100">
+                    <div className="flex items-center gap-3 mb-8">
+                        <MapPin className="text-abic-gold" size={32} />
+                        <h2 className="text-3xl font-bold text-gray-900">Provincial Nominee Programs (PNP)</h2>
                     </div>
-                    <ul className="space-y-3 bg-red-50 p-6 rounded-xl text-gray-700">
-                        <li>• Failing to declare all family members (even if they aren't coming with you).</li>
-                        <li>• Miscalculating work experience hours (needs to be full-time equivalent).</li>
-                        <li>• Using expired forms or outdated checklists.</li>
-                    </ul>
+
+                    <p className="text-gray-700 mb-6">
+                        Provincial Nominee Programs allow Canadian provinces and territories to nominate individuals who wish to immigrate to Canada and settle in a particular province. Each province has its own streams and criteria.
+                    </p>
+
+                    <div className="bg-white p-6 rounded-xl border border-amber-200">
+                        <p className="text-gray-700">
+                            Recent PNP updates and program changes – high-level information only. Consult with a licensed RCIC for program-specific advice.
+                        </p>
+                    </div>
+                </section>
+
+                {/* Disclaimer */}
+                <section className="bg-yellow-50 border-l-4 border-yellow-400 p-8 rounded-r-2xl">
+                    <div className="flex items-start gap-4">
+                        <AlertCircle className="text-yellow-600 shrink-0 mt-1" size={24} />
+                        <div>
+                            <h3 className="font-bold text-gray-900 mb-2">Important Notice</h3>
+                            <p className="text-gray-700">
+                                This section is for general information only and does not constitute legal advice. Immigration laws and policies change frequently. Always consult a licensed RCIC for advice specific to your situation.
+                            </p>
+                        </div>
+                    </div>
                 </section>
 
             </div>

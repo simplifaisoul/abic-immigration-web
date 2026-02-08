@@ -16,25 +16,6 @@ const ConsultationCard = ({ title, price, children, btnText, btnLink }: { title:
     </div>
 );
 
-const FeeGroup = ({ title, children }: { title: string, children: React.ReactNode }) => (
-    <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm h-full">
-        <h3 className="text-lg font-bold text-white bg-abic-blue py-2 px-4 rounded-lg mb-6 inline-block">{title}</h3>
-        <div className="space-y-6">
-            {children}
-        </div>
-    </div>
-);
-
-const FeeItem = ({ name, range, note }: { name: string, range: string, note?: string }) => (
-    <div className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
-        <div className="flex justify-between items-start gap-4 mb-1">
-            <span className="font-medium text-gray-800 text-left">{name}</span>
-            <span className="font-bold text-abic-blue whitespace-nowrap">{range}</span>
-        </div>
-        {note && <p className="text-xs text-gray-500 italic text-left mt-1">{note}</p>}
-    </div>
-);
-
 const Step = ({ num, text }: { num: string, text: string }) => (
     <div className="flex flex-col items-center">
         <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-abic-gold font-bold mb-3 border border-white/20">
@@ -94,27 +75,95 @@ export default function Fees() {
                         <p className="text-gray-600">Estimates for full representation. Final quotes provided after consultation based on complexity.</p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <FeeGroup title="Temporary Residence">
-                            <FeeItem name="Visitor Visa (TRV)" range="$800 – $1,500+" />
-                            <FeeItem name="Study Permit" range="$1,500 – $3,000+" />
-                            <FeeItem name="Work Permit" range="$1,800 – $3,500+" />
-                            <FeeItem name="Extensions" range="$600 – $1,200+" />
-                        </FeeGroup>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {/* Temporary Residence */}
+                        <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl border-2 border-blue-100 shadow-lg hover:shadow-xl transition-all">
+                            <div className="bg-abic-blue text-white py-2 px-4 rounded-lg mb-6 text-center font-bold">
+                                Temporary Residence
+                            </div>
+                            <div className="space-y-4">
+                                <div className="pb-3 border-b border-gray-200">
+                                    <div className="font-semibold text-gray-800 mb-1">Visitor Visa (TRV)</div>
+                                    <div className="text-abic-blue font-bold">$800 – $1,500+</div>
+                                </div>
+                                <div className="pb-3 border-b border-gray-200">
+                                    <div className="font-semibold text-gray-800 mb-1">Study Permit</div>
+                                    <div className="text-abic-blue font-bold">$1,500 – $3,000+</div>
+                                </div>
+                                <div className="pb-3 border-b border-gray-200">
+                                    <div className="font-semibold text-gray-800 mb-1">Work Permit</div>
+                                    <div className="text-abic-blue font-bold">$1,800 – $3,500+</div>
+                                </div>
+                                <div className="pb-3">
+                                    <div className="font-semibold text-gray-800 mb-1">Extensions</div>
+                                    <div className="text-abic-blue font-bold">$600 – $1,200+</div>
+                                </div>
+                            </div>
+                        </div>
 
-                        <FeeGroup title="Permanent Residence">
-                            <FeeItem name="Express Entry Profile" range="$2,000+" />
-                            <FeeItem name="PNP Nomination" range="$2,500 – $4,500+" />
-                            <FeeItem name="Family Sponsorship" range="$2,000 – $4,000+" />
-                            <FeeItem name="Humanitarian (H&C)" range="Case Specific" />
-                        </FeeGroup>
+                        {/* Permanent Residence */}
+                        <div className="bg-gradient-to-br from-green-50 to-white p-8 rounded-2xl border-2 border-green-100 shadow-lg hover:shadow-xl transition-all">
+                            <div className="bg-green-600 text-white py-2 px-4 rounded-lg mb-6 text-center font-bold">
+                                Permanent Residence
+                            </div>
+                            <div className="space-y-4">
+                                <div className="pb-3 border-b border-gray-200">
+                                    <div className="font-semibold text-gray-800 mb-1">Express Entry Profile</div>
+                                    <div className="text-green-600 font-bold">$2,000+</div>
+                                </div>
+                                <div className="pb-3 border-b border-gray-200">
+                                    <div className="font-semibold text-gray-800 mb-1">PNP Nomination</div>
+                                    <div className="text-green-600 font-bold">$2,500 – $4,500+</div>
+                                </div>
+                                <div className="pb-3 border-b border-gray-200">
+                                    <div className="font-semibold text-gray-800 mb-1">Family Sponsorship</div>
+                                    <div className="text-green-600 font-bold">$2,000 – $4,000+</div>
+                                </div>
+                                <div className="pb-3">
+                                    <div className="font-semibold text-gray-800 mb-1">Humanitarian (H&C)</div>
+                                    <div className="text-green-600 font-bold">Case Specific</div>
+                                </div>
+                            </div>
+                        </div>
 
-                        <FeeGroup title="Employer Services">
-                            <FeeItem name="LCMA - Low Wage" range="$2,500+" />
-                            <FeeItem name="LMIA - High Wage" range="$3,000+" />
-                            <FeeItem name="Compliance Review" range="$500/hr" />
-                            <FeeItem name="Work Permit Support" range="$1,500+" />
-                        </FeeGroup>
+                        {/* Employer Services */}
+                        <div className="bg-gradient-to-br from-amber-50 to-white p-8 rounded-2xl border-2 border-amber-100 shadow-lg hover:shadow-xl transition-all">
+                            <div className="bg-abic-gold text-abic-blue py-2 px-4 rounded-lg mb-6 text-center font-bold">
+                                Employer Services
+                            </div>
+                            <div className="space-y-4">
+                                <div className="pb-3 border-b border-gray-200">
+                                    <div className="font-semibold text-gray-800 mb-1">LMIA - Low Wage</div>
+                                    <div className="text-amber-600 font-bold">$2,500+</div>
+                                </div>
+                                <div className="pb-3 border-b border-gray-200">
+                                    <div className="font-semibold text-gray-800 mb-1">LMIA - High Wage</div>
+                                    <div className="text-amber-600 font-bold">$3,000+</div>
+                                </div>
+                                <div className="pb-3 border-b border-gray-200">
+                                    <div className="font-semibold text-gray-800 mb-1">Compliance Review</div>
+                                    <div className="text-amber-600 font-bold">$500/hr</div>
+                                </div>
+                                <div className="pb-3">
+                                    <div className="font-semibold text-gray-800 mb-1">Work Permit Support</div>
+                                    <div className="text-amber-600 font-bold">$1,500+</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Additional Services - Placeholder for future expansion */}
+                        <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border-2 border-gray-200 shadow-lg hover:shadow-xl transition-all flex items-center justify-center">
+                            <div className="text-center">
+                                <div className="text-gray-400 mb-4">
+                                    <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                </div>
+                                <h3 className="font-bold text-gray-700 mb-2">Need Something Else?</h3>
+                                <p className="text-sm text-gray-500 mb-4">We handle complex cases and custom situations</p>
+                                <Link to="/contact" className="text-abic-blue font-bold text-sm hover:underline">Contact Us →</Link>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
