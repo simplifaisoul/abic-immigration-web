@@ -1,6 +1,6 @@
 import ServiceLayout from "../components/ServiceLayout";
 import { Link } from "react-router-dom";
-import { GraduationCap, MapPin, ArrowRight } from "lucide-react";
+import { GraduationCap, ArrowRight } from "lucide-react";
 
 export default function StudentsLanding() {
     return (
