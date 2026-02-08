@@ -131,6 +131,16 @@ export default function OurPractice() {
                     </div>
                 </section>
 
+                {/* 5.5. CREDENTIAL BADGES */}
+                <section className="text-center py-8">
+                    <p className="text-gray-400 text-sm font-bold uppercase tracking-widest mb-6">Accreditations & Memberships</p>
+                    <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-90">
+                        <img src="/assets/logos/CICC logo.png" alt="CICC Regulated" className="h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                        <img src="/assets/logos/capic.jpg" alt="CAPIC Member" className="h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                        <img src="/assets/logos/ICEF.jpeg" alt="ICEF Agent" className="h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                    </div>
+                </section>
+
                 {/* 6. WHY CHOOSE ABIC */}
                 <section className="text-center py-8">
                     <h3 className="text-2xl font-bold text-gray-900 mb-8 font-montserrat">Why Clients Choose ABIC</h3>
