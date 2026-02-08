@@ -1,87 +1,181 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Globe, GraduationCap, Users } from "lucide-react";
-import GlobeHero from "../components/GlobeHero";
+import { GraduationCap, FileCheck, Globe, ShieldAlert, BadgeCheck, PlayCircle } from "lucide-react";
+import { motion } from "framer-motion";
 import VideoTestimonials from "../components/VideoTestimonials";
 
 export default function Home() {
     return (
-        <div className="overflow-x-hidden font-sans">
+        <div className="font-sans">
 
-            <GlobeHero />
+            {/* 1. HERO SECTION */}
+            <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+                {/* Background Image: Group of International Students */}
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src="/assets/misc/group-of-friends-hanging-out-933964.jpg"
+                        alt="International Students in Canada"
+                        className="w-full h-full object-cover object-center"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-900/40 to-transparent"></div>
+                </div>
 
-            {/* --- SERVICES PREVIEW --- */}
-            <section className="py-24 bg-gray-50 relative">
-                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
-                        <span className="text-abic-blue font-bold tracking-widest uppercase text-xs mb-3 block">Our Expertise</span>
-                        <h2 className="text-gray-900 font-montserrat font-bold text-4xl mb-6">Comprehensive Immigration Pathways</h2>
-                        <p className="text-gray-600 text-lg leading-relaxed">
-                            Whether you're a skilled worker, a student, or looking to reunite with family, we strictly adhere to Canadian immigration laws to find the best pathway for you.
+                <div className="container mx-auto px-4 relative z-10 pt-20">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="max-w-3xl"
+                    >
+                        <span className="inline-block bg-abic-gold/20 border border-abic-gold text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider mb-6 backdrop-blur-sm">
+                            Authorized & Regulated Representation
+                        </span>
+                        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                            Canadian Immigration Services. <br />
+                            <span className="text-abic-gold">Clear. Strategic. Compliance-First.</span>
+                        </h1>
+                        <p className="text-xl md:text-2xl text-white/90 mb-10 font-light max-w-2xl leading-relaxed">
+                            Start your journey with confidence. Regulated experts for students, professionals, and families.
                         </p>
+                        <div className="flex flex-col sm:flex-row gap-6">
+                            <Link to="/contact" className="bg-abic-gold text-abic-blue text-lg font-bold px-8 py-4 rounded-full shadow-lg hover:bg-white hover:text-abic-blue transition-all transform hover:-translate-y-1 text-center">
+                                Book a Consultation
+                            </Link>
+                            <Link to="/students" className="border-2 border-white text-white text-lg font-bold px-8 py-4 rounded-full hover:bg-white hover:text-abic-blue transition-colors text-center flex items-center justify-center gap-2">
+                                <GraduationCap /> Student Support
+                            </Link>
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* 2. TRUST & RECOGNITION BADGES */}
+            <section className="bg-white py-12 border-b border-gray-100">
+                <div className="container mx-auto px-4">
+                    <p className="text-center text-gray-400 text-sm font-bold uppercase tracking-widest mb-8">Trusted & Recognized By</p>
+                    <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-80 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 duration-300">
+                        {/* Using local assets where found, generic placeholders where specific files missing */}
+                        <img src="/assets/cicc-logo-new.png" alt="CICC Regulated" className="h-16 object-contain" />
+                        <img src="/assets/logos/capic.jpg" alt="CAPIC Member" className="h-14 object-contain" />
+                        <img src="/assets/logos/ICEF.jpeg" alt="ICEF Agent" className="h-14 object-contain" />
+                        <img src="/assets/logos/Ashton Logo.png" alt="Ashton College" className="h-12 object-contain" />
+                    </div>
+                </div>
+            </section>
+
+            {/* 3. QUICK ACCESS TILES */}
+            <section className="py-20 bg-gray-50 relative">
+                <div className="container mx-auto px-4">
+                    <div className="grid md:grid-cols-4 gap-6 -mt-32 relative z-20">
+                        <QuickTile
+                            to="/students"
+                            icon={<GraduationCap size={32} />}
+                            title="Student Services"
+                            desc="Waterloo & Guelph Hubs"
+                            color="bg-blue-600"
+                        />
+                        <QuickTile
+                            to="/services"
+                            icon={<FileCheck size={32} />}
+                            title="Visa & Permits"
+                            desc="Visitor, Study, Work"
+                            color="bg-blue-700"
+                        />
+                        <QuickTile
+                            to="/services"
+                            icon={<Globe size={32} />}
+                            title="Express Entry & PR"
+                            desc="Pathways to Permanence"
+                            color="bg-blue-800"
+                        />
+                        <QuickTile
+                            to="/services"
+                            icon={<ShieldAlert size={32} />}
+                            title="Refusals & Appeals"
+                            desc="Expert Case Review"
+                            color="bg-blue-900"
+                        />
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <PremiumCard
-                            icon={<Globe className="text-white" size={28} />}
-                            title="Immigrate Permanently"
-                            desc="Express Entry, PNP, and Family Sponsorship pathways to call Canada home."
-                            link="/express-entry"
-                            color="bg-abic-blue"
-                        />
-                        <PremiumCard
-                            icon={<GraduationCap className="text-white" size={28} />}
-                            title="Study in Canada"
-                            desc="Access world-class education with Study Permits and Post-Grad guidance."
-                            link="/study-in-canada"
-                            color="bg-abic-red"
-                        />
-                        <PremiumCard
-                            icon={<Users className="text-white" size={28} />}
-                            title="Work in Canada"
-                            desc="Secure your career with LMIA-based and Open Work Permits."
-                            link="/work-permit"
-                            color="bg-abic-gold"
-                        />
-                    </div>
 
-                    <div className="mt-16 text-center">
-                        <Link to="/visitor-visa" className="inline-flex items-center gap-2 text-abic-blue font-bold hover:text-abic-red transition-colors border-b-2 border-transparent hover:border-abic-red pb-1">
-                            Browse All Services <ArrowRight size={18} />
+                    {/* 4. SERVICES OVERVIEW GRID */}
+                    <div className="mt-24">
+                        <SectionHeader title="Comprehensive Immigration Services" subtitle="Expert guidance for every step of your journey." />
+
+                        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
+                            <ServiceCard title="Visitor Visa" icon="✈️" link="/services" />
+                            <ServiceCard title="Study Permit" icon="🎓" link="/services" />
+                            <ServiceCard title="Work Permit / PGWP" icon="💼" link="/services" />
+                            <ServiceCard title="Express Entry" icon="🍁" link="/services" />
+                            <ServiceCard title="Family Sponsorship" icon="👨‍👩‍👧‍👦" link="/services" />
+                            <ServiceCard title="LMIA Services" icon="🏢" link="/services" />
+                            <ServiceCard title="Refusals & Appeals" icon="⚖️" link="/services" />
+                            <ServiceCard title="H&C Applications" icon="❤️" link="/services" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 5. STUDENT HIGHLIGHT SECTION */}
+            <section className="py-20 bg-abic-blue text-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 transform origin-top-right"></div>
+                <div className="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center gap-12">
+                    <div className="flex-1 space-y-8">
+                        <h2 className="text-4xl font-bold leading-tight">Attention Students in <br /><span className="text-abic-gold">Waterloo & Guelph</span></h2>
+                        <p className="text-lg opacity-90 max-w-xl">
+                            We are your local immigration partners. Specializing in study permit extensions, PGWP transitions, and restoration of status for students at UWaterloo, Laurier, Conestoga, and UofGuelph.
+                        </p>
+                        <div className="flex flex-wrap gap-4">
+                            <Link to="/students/waterloo" className="bg-white text-abic-blue hover:bg-abic-gold hover:text-white font-bold px-8 py-3 rounded-xl transition-all shadow-md">
+                                Waterloo Students
+                            </Link>
+                            <Link to="/students/guelph" className="bg-transparent border-2 border-white hover:bg-white hover:text-abic-blue font-bold px-8 py-3 rounded-xl transition-all">
+                                Guelph Students
+                            </Link>
+                        </div>
+                        <div className="pt-4 flex items-center gap-4 text-sm font-bold tracking-wide uppercase opacity-75">
+                            <BadgeCheck className="text-abic-gold" /> Regulated Support
+                            <span className="w-1 h-1 bg-white rounded-full"></span>
+                            Consultations from $45
+                        </div>
+                    </div>
+                    <div className="flex-1 bg-white p-8 rounded-3xl shadow-2xl text-gray-900 max-w-md ml-auto">
+                        <h3 className="font-bold text-xl mb-6 flex items-center gap-2">
+                            <PlayCircle className="text-abic-blue" />
+                            Student Success Stories
+                        </h3>
+                        {/* Placeholder for Client Video - Standard HTML5 Video or Embed */}
+                        <div className="aspect-video bg-gray-100 rounded-xl overflow-hidden relative group cursor-pointer mb-6">
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <span className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                    <PlayCircle size={32} className="text-abic-blue ml-1" />
+                                </span>
+                            </div>
+                            <img src="/assets/misc/people-looking-at-laptop-computer-1595391.jpg" alt="Video Thumbnail" className="w-full h-full object-cover" />
+                        </div>
+                        <p className="text-gray-600 text-sm mb-6 italic">"Anthony helped me restore my status when I thought all was lost. Highly recommended for complex cases." — Javier</p>
+                        <Link to="/about/reviews" className="text-abic-blue font-bold hover:underline text-sm block text-center">
+                            Watch More Testimonials &rarr;
                         </Link>
                     </div>
                 </div>
             </section>
 
-            {/* --- STATS / TRUST --- */}
-            <section className="py-20 bg-white border-y border-gray-100">
-                <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-12 md:gap-24 text-center">
-                    <Stat number="10+" label="Years Experience" />
-                    <Stat number="500+" label="Successful Cases" />
-                    <Stat number="50+" label="Countries Served" />
-                </div>
-            </section>
-
+            {/* 6. CLIENT VIDEO TESTIMONIALS (Restored) */}
             <VideoTestimonials />
 
-            {/* --- CTA SECTION --- */}
-            <section className="py-32 bg-abic-blue relative overflow-hidden">
-                {/* Abstract Background Shapes */}
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-abic-gold/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
-
-                <div className="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-8">
-                    <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-white leading-tight">
-                        Don't Leave Your Future to Chance.
-                    </h2>
-                    <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-                        Immigration laws change frequently. Ensure your application is accurate, optimized, and professionally represented.
+            {/* 7. FINAL CTA */}
+            <section className="py-24 bg-gray-50 border-t border-gray-100 text-center">
+                <div className="container mx-auto px-4 max-w-3xl">
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Ready to Start Your Application?</h2>
+                    <p className="text-xl text-gray-500 mb-10 leading-relaxed">
+                        Immigration laws change frequently. Don't rely on outdated advice. Book a consultation with a Regulated Canadian Immigration Consultant (RCIC) today.
                     </p>
-                    <div className="pt-4">
-                        <Link to="/book-consultation" className="inline-flex items-center gap-3 px-10 py-5 bg-abic-gold hover:bg-yellow-500 text-abic-blue font-bold text-lg rounded-full shadow-2xl hover:shadow-yellow-500/30 transition-all hover:-translate-y-1 transform">
-                            Book Your Consultation
-                        </Link>
-                    </div>
+                    <Link to="/contact" className="bg-abic-blue text-white px-10 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all inline-block">
+                        Book Consultation
+                    </Link>
+                    <p className="mt-8 text-sm text-gray-400 font-medium uppercase tracking-widest">
+                        Mississauga • Waterloo • Guelph
+                    </p>
                 </div>
             </section>
 
@@ -89,26 +183,34 @@ export default function Home() {
     );
 }
 
-const PremiumCard = ({ icon, title, desc, link, color }: any) => (
-    <Link to={link} className="group relative bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 overflow-hidden">
-        <div className={`absolute top-0 right-0 w-32 h-32 ${color} opacity-5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700`}></div>
+// --- SUB-COMPONENTS ---
 
-        <div className={`w-14 h-14 ${color} rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300`}>
+const QuickTile = ({ to, icon, title, desc, color }: any) => (
+    <Link to={to} className={`${color} text-white p-8 rounded-2xl shadow-xl hover:-translate-y-2 transition-transform duration-300 flex flex-col items-start gap-4 group`}>
+        <div className="bg-white/20 p-3 rounded-xl backdrop-blur-sm group-hover:bg-white/30 transition-colors">
             {icon}
         </div>
-
-        <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-abic-blue transition-colors">{title}</h3>
-        <p className="text-gray-600 mb-6 leading-relaxed bg-white/50 relative z-10">{desc}</p>
-
-        <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-gray-400 group-hover:text-abic-blue transition-colors">
-            Start Process <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+        <div>
+            <h3 className="font-bold text-xl mb-1">{title}</h3>
+            <p className="text-white/80 text-sm">{desc}</p>
         </div>
     </Link>
 );
 
-const Stat = ({ number, label }: any) => (
-    <div className="space-y-1">
-        <div className="text-4xl md:text-5xl font-bold text-abic-blue font-montserrat">{number}</div>
-        <div className="text-sm font-bold text-abic-gold uppercase tracking-widest">{label}</div>
+const ServiceCard = ({ title, icon, link }: any) => (
+    <Link to={link || "#"} className="bg-white border border-gray-100 p-8 rounded-2xl hover:shadow-xl hover:border-abic-blue/30 transition-all group text-center">
+        <span className="text-4xl mb-4 block group-hover:scale-110 transition-transform duration-300">{icon}</span>
+        <h3 className="font-bold text-gray-900 group-hover:text-abic-blue transition-colors">{title}</h3>
+    </Link>
+);
+
+
+
+
+const SectionHeader = ({ title, subtitle }: any) => (
+    <div className="text-center max-w-3xl mx-auto mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{title}</h2>
+        <p className="text-gray-500 text-lg">{subtitle}</p>
+        <div className="w-20 h-1 bg-abic-gold mx-auto mt-6 rounded-full"></div>
     </div>
 );

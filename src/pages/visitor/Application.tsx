@@ -1,5 +1,6 @@
 import ServiceLayout from "../../components/ServiceLayout";
-import { CheckCircle2, Clock, FileText, AlertTriangle } from "lucide-react";
+import ServiceContent from "../../components/ServiceContent";
+import { CheckCircle2 } from "lucide-react";
 
 export default function VisitorVisaApplication() {
     return (
@@ -10,30 +11,21 @@ export default function VisitorVisaApplication() {
         >
             <div className="space-y-12">
 
-                {/* Overview */}
-                <section className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Securing Your Temporary Resident Visa (TRV)</h2>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                        A Visitor Visa (TRV) allows foreign nationals to enter Canada for tourism, visiting family, or conducting business. While it may seem straightforward, refusals are common due to weak ties to home country or unclear travel purpose. We build a comprehensive case to maximize your approval chances.
-                    </p>
-                    <div className="grid md:grid-cols-3 gap-6">
-                        <div className="bg-gray-50 p-4 rounded-xl">
-                            <Clock className="text-abic-blue mb-2" size={24} />
-                            <h3 className="font-bold text-gray-900">Processing Time</h3>
-                            <p className="text-sm text-gray-500">Varies by country (15-60 days avg)</p>
-                        </div>
-                        <div className="bg-gray-50 p-4 rounded-xl">
-                            <FileText className="text-abic-blue mb-2" size={24} />
-                            <h3 className="font-bold text-gray-900">Validity</h3>
-                            <p className="text-sm text-gray-500">Up to 10 years (or passport expiry)</p>
-                        </div>
-                        <div className="bg-gray-50 p-4 rounded-xl">
-                            <AlertTriangle className="text-abic-blue mb-2" size={24} />
-                            <h3 className="font-bold text-gray-900">Key Risk</h3>
-                            <p className="text-sm text-gray-500">Proof of ties to home country</p>
-                        </div>
-                    </div>
-                </section>
+                <ServiceContent
+                    what="A Visitor Visa (Temporary Resident Visa or TRV) is an official document issued by a Canadian visa office that is placed in your passport to show that you have met the requirements for admission to Canada as a temporary resident (either as a visitor, a student, or a worker)."
+                    who={[
+                        "Tourists and holiday makers",
+                        "Individuals visiting family or friends",
+                        "Business visitors attending conferences or meetings",
+                        "Short-term students (under 6 months)"
+                    ]}
+                    risks={[
+                        "Refusal due to weak family or financial ties to home country",
+                        "Unclear purpose of visit or travel history issues",
+                        "Misrepresentation of funds or employment",
+                        "Applying for the wrong type of visa (e.g., business vs. tourist)"
+                    ]}
+                />
 
                 {/* Eligibility */}
                 <section>

@@ -1,89 +1,60 @@
 import ServiceLayout from "../../components/ServiceLayout";
-import { Scale, Lock, Book, FileCheck } from "lucide-react";
-import { Link } from "react-router-dom";
+import { FileText, Shield, Scale, Lock } from "lucide-react";
 
 export default function Ethics() {
     return (
         <ServiceLayout
-            title="Ethics & Standards"
-            subtitle="Adhering to the highest standards of professional conduct in Canadian immigration."
-            heroImage="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+            title="Ethics & Professional Standards"
+            subtitle="Adhering to the highest code of professional conduct."
+            heroImage="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=2000"
         >
-            <div className="space-y-16">
+            <div className="space-y-12">
 
-                {/* Code of Ethics Intro */}
-                <section className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm md:p-12">
-                    <div className="flex items-start gap-6">
-                        <div className="p-4 bg-abic-blue/10 text-abic-blue rounded-2xl hidden md:block">
-                            <Scale size={48} />
-                        </div>
-                        <div>
-                            <h2 className="text-3xl font-bold text-gray-900 mb-6 font-montserrat">Code of Professional Ethics</h2>
-                            <p className="text-gray-600 leading-relaxed text-lg mb-6">
-                                As Members of the College of Immigration and Citizenship Consultants (CICC), we are bound by a strict Code of Professional Ethics.
-                                This code is capable of being enforced by law and exists to protect the public.
-                            </p>
-                            <p className="text-gray-600 leading-relaxed">
-                                We prioritize competence, honesty, and loyalty to our clients. We will never guarantee a result, as the final decision rests with the immigration officer, but we guarantee our best professional effort and advocacy on your behalf.
-                            </p>
-                        </div>
-                    </div>
-                </section>
+                <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto text-center">
+                    As Regulated Canadian Immigration Consultants, we are bound by a strict <strong>Code of Professional Ethics</strong> administered by the College of Immigration and Citizenship Consultants (CICC). We take these obligations seriously.
+                </p>
 
-                {/* Key Principles */}
-                <section className="grid md:grid-cols-3 gap-8">
-                    <PrincipleCard
-                        icon={<Lock size={32} />}
+                <div className="grid md:grid-cols-2 gap-8">
+                    <EthicCard
+                        icon={<Shield className="text-abic-blue" size={32} />}
+                        title="Duty of Competence"
+                        desc="We only undertake cases where we have the knowledge and expertise to provide quality representation. We stay updated on the latest immigration laws and policies."
+                    />
+                    <EthicCard
+                        icon={<Lock className="text-abic-blue" size={32} />}
                         title="Confidentiality"
-                        desc="Your personal information is sacred. We maintain strict solicitor-client privilege protocols to ensure your data is secure."
+                        desc="We maintain strict client confidentiality. Your personal information and case details are protected and never shared without your explicit consent."
                     />
-                    <PrincipleCard
-                        icon={<Book size={32} />}
-                        title="Competence"
-                        desc="We are required to complete ongoing professional development (CPD) annually to stay updated on the latest immigration laws and policies."
+                    <EthicCard
+                        icon={<Scale className="text-abic-blue" size={32} />}
+                        title="Conflict of Interest"
+                        desc="We avoid all conflicts of interest. We acts solely in your best interest and will disclose any potential conflicts immediately."
                     />
-                    <PrincipleCard
-                        icon={<FileCheck size={32} />}
-                        title="Honesty"
-                        desc="We will provide a candid assessment of your chances. If you do not qualify, we will tell you. We do not take cases we believe have no merit."
+                    <EthicCard
+                        icon={<FileText className="text-abic-blue" size={32} />}
+                        title="Honesty & Candour"
+                        desc="We provide honest assessments. We will never guarantee an outcome, as the final decision rests with IRCC, but we guarantee our best professional effort."
                     />
-                </section>
+                </div>
 
-                <hr className="border-gray-100" />
-
-                {/* Retainer Agreement */}
-                <section className="flex flex-col md:flex-row items-center gap-12">
-                    <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-4">The Retainer Agreement</h3>
-                        <p className="text-gray-600 mb-4 leading-relaxed">
-                            Before we begin any work on your file, we will sign a Retainer Agreement. This is a legally binding contract that clearly outlines:
-                        </p>
-                        <ul className="space-y-2 text-gray-600 mb-6 list-disc pl-5">
-                            <li>The specific scope of work (what we will do for you).</li>
-                            <li>The fees and payment schedule (no hidden costs).</li>
-                            <li>Our duties to you and your duties to us.</li>
-                        </ul>
-                        <p className="text-gray-500 text-sm italic">
-                            Transparency is key to a successful professional relationship.
-                        </p>
-                    </div>
-                    <div className="shrink-0 bg-gray-50 p-8 rounded-2xl border border-gray-200 max-w-sm text-center">
-                        <h4 className="font-bold text-gray-900 mb-4">Ready to proceed?</h4>
-                        <Link to="/book-consultation" className="block bg-abic-blue text-white font-bold px-6 py-3 rounded-xl hover:bg-blue-900 transition-colors shadow-lg">
-                            Book Initial Consultation
-                        </Link>
-                    </div>
-                </section>
+                <div className="bg-gray-50 p-8 rounded-2xl border-l-4 border-abic-gold">
+                    <h3 className="font-bold text-gray-900 mb-4 tex-lg">Our Policy on Misrepresentation</h3>
+                    <p className="text-gray-700 mb-0">
+                        ABIC Immigration has a <strong>zero-tolerance policy for fraud and misrepresentation</strong>. We will not submit false documents or misleading information to the government. We believe in building your Canadian future on a foundation of truth and integrity.
+                    </p>
+                </div>
 
             </div>
         </ServiceLayout>
     );
 }
 
-const PrincipleCard = ({ icon, title, desc }: any) => (
-    <div className="bg-white p-8 rounded-2xl border border-gray-100 hover:border-abic-gold transition-colors group">
-        <div className="text-gray-400 mb-4 group-hover:text-abic-gold transition-colors">{icon}</div>
-        <h3 className="font-bold text-xl text-gray-900 mb-3">{title}</h3>
-        <p className="text-gray-600 leading-relaxed">{desc}</p>
+const EthicCard = ({ icon, title, desc }: any) => (
+    <div className="flex gap-4 p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-abic-blue/30 transition-colors">
+        <div className="shrink-0">{icon}</div>
+        <div>
+            <h4 className="font-bold text-lg text-gray-900 mb-2">{title}</h4>
+            <p className="text-gray-600 text-sm leading-relaxed">{desc}</p>
+        </div>
     </div>
 );

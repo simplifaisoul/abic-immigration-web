@@ -1,67 +1,46 @@
 import ServiceLayout from "../../components/ServiceLayout";
-import { Search, ShieldCheck, AlertTriangle } from "lucide-react";
+import { ExternalLink, ShieldCheck } from "lucide-react";
 
 export default function VerifyStatus() {
     return (
         <ServiceLayout
             title="Verify RCIC Status"
-            subtitle="Ensure you are protected. Verify that your representative is licensed and regulated."
-            heroImage="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+            subtitle="Your protection starts with verification."
+            heroImage="https://images.unsplash.com/photo-1589330694653-4a8b2446a96b?auto=format&fit=crop&q=80&w=2000"
         >
-            <div className="space-y-16">
+            <div className="space-y-12">
 
-                {/* Instructions */}
-                <section className="max-w-4xl mx-auto">
-                    <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                            <ShieldCheck className="text-green-600" size={32} />
-                            How to Verify an RCIC
-                        </h2>
-                        <div className="space-y-6">
-                            <Step
-                                num="1"
-                                title="Visit the CICC Public Register"
-                                desc="The College of Immigration and Citizenship Consultants (CICC) maintains the official registry."
-                            />
-                            <Step
-                                num="2"
-                                title="Search by RCIC Number"
-                                desc={
-                                    <span>
-                                        Enter Anthony Cheah's license number: <strong className="bg-yellow-100 px-2 rounded text-gray-900">R513360</strong>
-                                    </span>
-                                }
-                            />
-                            <Step
-                                num="3"
-                                title="Confirm Status"
-                                desc="Ensure the status is listed as 'Active'. This confirms the consultant is in good standing."
-                            />
-                        </div>
-
-                        <div className="mt-8 pt-8 border-t border-gray-100 text-center">
-                            <a
-                                href="https://college-ic.ca/protecting-the-public/find-an-immigration-consultant"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 bg-abic-blue text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-900 transition-colors shadow-lg"
-                            >
-                                <Search size={20} /> Open CICC Public Register
-                            </a>
-                        </div>
+                <section className="bg-blue-50 border border-blue-100 rounded-2xl p-8 text-center max-w-3xl mx-auto">
+                    <ShieldCheck className="mx-auto text-abic-blue mb-4" size={48} />
+                    <h2 className="text-2xl font-bold font-montserrat text-gray-900 mb-4">Why Verification Matters</h2>
+                    <p className="text-gray-700 mb-6">
+                        Working with an unauthorized consultant can lead to application refusal and a ban from Canada for 5 years.
+                        Always verify that your representative is a licensed RCIC in good standing.
+                    </p>
+                    <div className="inline-block bg-white px-6 py-3 rounded-lg border border-gray-200 shadow-sm font-mono text-lg font-bold text-gray-800">
+                        RCIC License #: <span className="text-abic-blue">R514217</span>
                     </div>
                 </section>
 
-                {/* Warning */}
-                <section className="bg-red-50 p-8 rounded-2xl border border-red-100 max-w-4xl mx-auto flex gap-6 items-start">
-                    <AlertTriangle className="text-red-500 shrink-0" size={40} />
-                    <div>
-                        <h3 className="font-bold text-xl text-red-800 mb-2">Be Wary of "Ghost Consultants"</h3>
-                        <p className="text-red-700 leading-relaxed">
-                            It is a serious offence for anyone to provide Canadian immigration advice for a fee unless they are an RCIC, a Canadian lawyer, or a Quebec notary.
-                            If someone offers to help you "behind the scenes" without signing a Retainer Agreement or putting their name on the forms, they are likely unauthorized.
-                            Using a ghost consultant can lead to your application being rejected on the grounds of misrepresentation.
-                        </p>
+                <section className="max-w-4xl mx-auto">
+                    <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">How to Verify on the CICC Public Register</h3>
+
+                    <div className="grid md:grid-cols-3 gap-6">
+                        <Step number="1" title="Visit CICC Website" desc="Go to the College of Immigration and Citizenship Consultants public register." />
+                        <Step number="2" title="Search by Name/ID" desc="Enter 'Anthony Cheah' or 'R514217' in the search fields." />
+                        <Step number="3" title="Confirm Status" desc="Ensure the status is listed as 'Active'." />
+                    </div>
+
+                    <div className="text-center mt-12">
+                        <a
+                            href="https://college-ic.ca/protecting-the-public/find-an-immigration-consultant"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 bg-abic-blue text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-800 transition-colors shadow-lg hover:shadow-xl"
+                        >
+                            Open CICC Public Register <ExternalLink size={20} />
+                        </a>
+                        <p className="text-xs text-gray-500 mt-4">Link opens in a new tab on the official government-authorized website.</p>
                     </div>
                 </section>
 
@@ -70,14 +49,12 @@ export default function VerifyStatus() {
     );
 }
 
-const Step = ({ num, title, desc }: any) => (
-    <div className="flex gap-4">
-        <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center font-bold text-gray-500 shrink-0 border border-gray-200">
-            {num}
+const Step = ({ number, title, desc }: any) => (
+    <div className="flex flex-col items-center text-center p-6 bg-white border border-gray-100 rounded-xl shadow-sm">
+        <div className="w-10 h-10 rounded-full bg-abic-gold text-white flex items-center justify-center font-bold text-xl mb-4 shadow-md">
+            {number}
         </div>
-        <div>
-            <h4 className="font-bold text-lg text-gray-900">{title}</h4>
-            <p className="text-gray-600 mt-1">{desc}</p>
-        </div>
+        <h4 className="font-bold text-gray-900 mb-2">{title}</h4>
+        <p className="text-sm text-gray-600">{desc}</p>
     </div>
 );

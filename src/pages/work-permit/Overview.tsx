@@ -1,5 +1,5 @@
 import ServiceLayout from "../../components/ServiceLayout";
-import { AlertTriangle } from "lucide-react";
+import ServiceContent from "../../components/ServiceContent";
 
 export default function WorkPermitOverview() {
     return (
@@ -9,6 +9,22 @@ export default function WorkPermitOverview() {
             heroImage="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
         >
             <div className="space-y-12">
+
+                <ServiceContent
+                    what="A Work Permit authorizes foreign nationals to work in Canada for a specific time period. Work permits are generally divided into two categories: Open Work Permits (allowing work for most employers) and Employer-Specific Work Permits (tied to one employer)."
+                    who={[
+                        "Foreign workers with a valid job offer (LMIA)",
+                        "Graduates eligible for a PGWP",
+                        "Spouses of skilled workers or international students",
+                        "Business professionals under international agreements (CUSMA/GATS)"
+                    ]}
+                    risks={[
+                        "Working without authorization (or exceeding authorized hours)",
+                        "Misunderstanding 'Implied Status' during extensions",
+                        "Employer non-compliance affecting your permit validity",
+                        "Inaccuracies in job descriptions vs. actual duties (NOC mismatch)"
+                    ]}
+                />
 
                 <section className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                     <h2 className="text-2xl font-bold text-gray-900 mb-6">Open vs. Closed Work Permits</h2>
@@ -38,18 +54,7 @@ export default function WorkPermitOverview() {
                     </div>
                 </section>
 
-                <section>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Common Issues</h2>
-                    <div className="flex gap-4 p-4 bg-yellow-50 rounded-xl border border-yellow-100">
-                        <AlertTriangle className="text-yellow-600 shrink-0" />
-                        <div>
-                            <h4 className="font-bold text-yellow-900">Implied Status</h4>
-                            <p className="text-sm text-yellow-800">
-                                If you apply for an extension *before* your current permit expires, you can keep working until a decision is made. If you miss the deadline, you must stop working immediately.
-                            </p>
-                        </div>
-                    </div>
-                </section>
+
 
             </div>
         </ServiceLayout>

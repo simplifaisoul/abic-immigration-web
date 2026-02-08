@@ -1,63 +1,130 @@
 import ServiceLayout from "../../components/ServiceLayout";
-import { Globe, Users, Target } from "lucide-react";
-import { Link } from "react-router-dom";
 
 export default function OurPractice() {
     return (
         <ServiceLayout
-            title="Our Practice"
-            subtitle="Integrity. Expertise. Personalized Strategy. Your trusted partner in Canadian immigration."
-            heroImage="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+            title="Principal Consultant"
+            subtitle="Regulated, Experienced, and Ethical Representation."
+            heroImage="/assets/misc/woman-sitting-on-gray-chair-1543895.jpg" // Using available asset as placeholder for Anthony's bg if plain color not preferred
         >
-            <div className="space-y-16">
+            <div className="max-w-4xl mx-auto text-left space-y-12">
 
-                {/* Philosophy */}
-                <section className="text-center max-w-4xl mx-auto">
-                    <h2 className="text-3xl font-bold font-montserrat text-gray-900 mb-8">More Than Just Paperwork</h2>
-                    <p className="text-gray-600 leading-relaxed text-lg mb-8">
-                        At ABIC Immigration, we believe that every client is is a unique story, not just a file number.
-                        We are dedicated to providing ethical, transparent, and results-driven legal representation.
-                        We don't just fill out forms; we build comprehensive strategies to turn your Canadian dream into reality.
-                    </p>
-                    <div className="grid md:grid-cols-3 gap-8 text-left mt-12">
-                        <ValueCard
-                            icon={<Target className="text-abic-red" size={32} />}
-                            title="Strategic Approach"
-                            desc="We analyze your unique profile to find the most direct and secure pathway to Canada."
+                {/* 1. ANTHONY CHEAH BIO */}
+                <section className="flex flex-col md:flex-row gap-8 items-start">
+                    {/* Photo */}
+                    <div className="w-full md:w-1/3 shrink-0">
+                        <img
+                            src="/assets/anthony-cheah.png"
+                            alt="Anthony Wai Kean Cheah, RCIC"
+                            className="w-full rounded-2xl shadow-xl border-4 border-white"
                         />
-                        <ValueCard
-                            icon={<Users className="text-abic-blue" size={32} />}
-                            title="Client-Centric"
-                            desc="We communicate clearly and honestly. No hidden fees, no false promises."
-                        />
-                        <ValueCard
-                            icon={<Globe className="text-abic-gold" size={32} />}
-                            title="Global Reach"
-                            desc="Serving clients from over 50 countries with diverse backgrounds and goals."
-                        />
+                        <div className="mt-6 bg-gray-50 p-4 rounded-xl text-center border border-gray-100">
+                            <p className="font-bold text-abic-blue">Anthony Wai Kean Cheah</p>
+                            <p className="text-sm text-gray-500">RCIC (R511743)</p>
+                            <p className="text-xs text-gray-400 mt-2 uppercase tracking-wide">Principal Consultant & Director</p>
+                        </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1 space-y-6">
+                        <h2 className="text-3xl font-bold text-gray-900 font-montserrat">About the Principal</h2>
+                        <div className="prose prose-lg text-gray-600 leading-relaxed font-light">
+                            <p className="mb-4">
+                                <strong>Anthony Cheah</strong> is a Regulated Canadian Immigration Consultant (RCIC) with <strong>over 13 years</strong> of professional experience advising individuals, families, international students, and employers on Canadian immigration matters. He is the Director and Principal Consultant of <strong>Above & Beyond Immigration Consultant (ABIC)</strong>, a practice known for its ethical standards, technical accuracy, and compliance-driven approach.
+                            </p>
+                            <p>
+                                Anthony is widely respected for his ability to manage <strong>complex, high-risk, and sensitive immigration cases</strong>, including refusals, discretionary applications, and employer-compliance matters. His practice emphasizes realistic advice, strong documentation, and strict adherence to Canadian immigration law and policy.
+                            </p>
+                        </div>
                     </div>
                 </section>
 
                 <hr className="border-gray-100" />
 
-                {/* Founder Intro */}
-                <section className="bg-gray-50 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12">
-                    <div className="shrink-0 relative">
-                        <img
-                            src="/assets/anthony-cheah.png"
-                            alt="Anthony Cheah"
-                            className="w-48 h-48 object-cover rounded-full border-4 border-white shadow-xl"
-                        />
-                        <div className="absolute bottom-0 right-0 bg-abic-blue text-white text-xs font-bold px-3 py-1 rounded-full">FOUNDER</div>
-                    </div>
-                    <div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-4">Meet Anthony Cheah</h3>
-                        <p className="text-gray-600 mb-6 leading-relaxed">
-                            As a Regulated Canadian Immigration Consultant (RCIC), Anthony has helped hundreds of individuals and families navigate the complexities of Canadian immigration law. His practice is built on the foundation of rigorous adherence to professional standards and a deep passion for helping people build new lives in Canada.
+                {/* 2. PRACTICE FOCUS */}
+                <section>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-6 font-montserrat">Practice Focus</h3>
+                    <p className="text-gray-600 mb-6">Anthony advises clients across a broad range of Canadian immigration pathways, including:</p>
+                    <ul className="grid md:grid-cols-2 gap-4">
+                        <li className="flex gap-3 items-start text-gray-700 bg-gray-50 p-3 rounded-lg"><span className="text-abic-gold font-bold">✓</span> Study Permits, Work Permits, and PGWP</li>
+                        <li className="flex gap-3 items-start text-gray-700 bg-gray-50 p-3 rounded-lg"><span className="text-abic-gold font-bold">✓</span> Temporary Resident Visas (TRV)</li>
+                        <li className="flex gap-3 items-start text-gray-700 bg-gray-50 p-3 rounded-lg"><span className="text-abic-gold font-bold">✓</span> Express Entry and Provincial Nominee Programs</li>
+                        <li className="flex gap-3 items-start text-gray-700 bg-gray-50 p-3 rounded-lg"><span className="text-abic-gold font-bold">✓</span> Family Sponsorship</li>
+                        <li className="flex gap-3 items-start text-gray-700 bg-gray-50 p-3 rounded-lg"><span className="text-abic-gold font-bold">✓</span> Business, Investment, and Employer-Driven Applications</li>
+                        <li className="flex gap-3 items-start text-gray-700 bg-gray-50 p-3 rounded-lg"><span className="text-abic-gold font-bold">✓</span> LMIA-based employer work permits</li>
+                        <li className="flex gap-3 items-start text-gray-700 bg-gray-50 p-3 rounded-lg"><span className="text-abic-gold font-bold">✓</span> Humanitarian & Compassionate (H&C) applications</li>
+                        <li className="flex gap-3 items-start text-gray-700 bg-gray-50 p-3 rounded-lg"><span className="text-abic-gold font-bold">✓</span> Temporary Resident Permits (TRPs)</li>
+                        <li className="flex gap-3 items-start text-gray-700 bg-gray-50 p-3 rounded-lg"><span className="text-abic-gold font-bold">✓</span> Same-sex marriage and non-traditional family cases</li>
+                        <li className="flex gap-3 items-start text-gray-700 bg-gray-50 p-3 rounded-lg"><span className="text-abic-gold font-bold">✓</span> Refusals and re-applications</li>
+                    </ul>
+                    <div className="mt-6 bg-blue-50 border-l-4 border-abic-blue p-6 rounded-r-xl">
+                        <p className="text-gray-800 italic text-sm">
+                            "He is particularly experienced in files requiring strong legal analysis, credibility assessment, and discretionary decision-making, where attention to detail and regulatory compliance are critical."
                         </p>
-                        <Link to="/about/credentials" className="text-abic-blue font-bold hover:underline">
-                            View Full Credentials &rarr;
-                        </Link>
+                    </div>
+                </section>
+
+                {/* 3. EDUCATION & CREDENTIALS */}
+                <section className="bg-white border border-gray-100 shadow-lg p-8 rounded-3xl relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-abic-blue/5 rounded-bl-full -mr-8 -mt-8"></div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-6 font-montserrat relative z-10">Education & Professional Credentials</h3>
+                    <p className="text-gray-700 mb-6 relative z-10">Anthony brings a multidisciplinary academic and professional background to his immigration practice:</p>
+                    <ul className="space-y-4 relative z-10">
+                        <CredentialItem title="Regulated Canadian Immigration Consultant (RCIC)" subtitle="Licensed by the College of Immigration and Citizenship Consultants (CICC) — License No.: R511743" icon="⚖️" />
+                        <CredentialItem title="Master of Science (MSc) in Accounting" subtitle="United States" icon="🎓" />
+                        <CredentialItem title="Bachelor of Science (BSc) in Computer Science" subtitle="United States" icon="💻" />
+                        <CredentialItem title="Diploma in Business Management" subtitle="United Kingdom" icon="📜" />
+                    </ul>
+                    <p className="text-gray-500 mt-6 text-sm relative z-10 border-t border-gray-100 pt-4">
+                        This background supports his structured, analytical approach—particularly in business immigration, employer compliance, financial documentation, and complex case strategy.
+                    </p>
+                </section>
+
+                {/* 4. LEADERSHIP */}
+                <section>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-6 font-montserrat">Professional Leadership & Teaching</h3>
+                    <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                        <p className="mb-4 text-gray-600">In addition to private practice, Anthony has contributed extensively to the profession:</p>
+                        <ul className="space-y-3">
+                            <li className="flex gap-3 items-center text-gray-800"><span className="w-2 h-2 bg-abic-gold rounded-full"></span> Former Chairperson, Audit & Finance Committee — CAPIC</li>
+                            <li className="flex gap-3 items-center text-gray-800"><span className="w-2 h-2 bg-abic-gold rounded-full"></span> Former In-House Immigration Consultant, McMaster University</li>
+                            <li className="flex gap-3 items-center text-gray-800"><span className="w-2 h-2 bg-abic-gold rounded-full"></span> CICC Mentor for new and aspiring RCICs</li>
+                            <li className="flex gap-3 items-center text-gray-800"><span className="w-2 h-2 bg-abic-gold rounded-full"></span> Teaching Instructor, Ashton College (LMIA, Work Permits, TRV)</li>
+                            <li className="flex gap-3 items-center text-gray-800"><span className="w-2 h-2 bg-abic-gold rounded-full"></span> University-level instructor internationally (Canada, U.S., U.K., Malaysia, Australia)</li>
+                        </ul>
+                        <p className="mt-4 text-sm font-bold text-abic-blue uppercase tracking-wide">
+                            These roles reflect his standing as both a practitioner and educator within the immigration field.
+                        </p>
+                    </div>
+                </section>
+
+                {/* 5. REPUTATION */}
+                <section className="bg-gray-900 text-white p-10 rounded-3xl shadow-2xl relative overflow-hidden">
+                    <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-abic-gold/10 rounded-full blur-3xl"></div>
+                    <div className="relative z-10">
+                        <h3 className="text-2xl font-bold mb-6 text-white font-montserrat">Professional Reputation</h3>
+                        <p className="text-white/80 mb-8 max-w-2xl text-lg font-light">
+                            Clients and peers consistently describe Anthony as knowledgeable, professional, ethical, and transparent. His reputation is built on <span className="text-abic-gold font-bold">long-term trust, compliance, and consistency</span>, rather than volume-based or sales-driven outcomes.
+                        </p>
+                        <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
+                            <li className="flex gap-3 items-center text-white/90"><span className="text-abic-gold">★</span> Clear and practical explanations</li>
+                            <li className="flex gap-3 items-center text-white/90"><span className="text-abic-gold">★</span> Patient, one-on-one guidance</li>
+                            <li className="flex gap-3 items-center text-white/90"><span className="text-abic-gold">★</span> Strong attention to detail</li>
+                            <li className="flex gap-3 items-center text-white/90"><span className="text-abic-gold">★</span> Honest advice with realistic expectations</li>
+                            <li className="flex gap-3 items-center text-white/90"><span className="text-abic-gold">★</span> Avoidance of false promises</li>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 6. WHY CHOOSE ABIC */}
+                <section className="text-center py-8">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-8 font-montserrat">Why Clients Choose ABIC</h3>
+                    <div className="flex flex-wrap justify-center gap-4">
+                        <span className="bg-white border border-gray-200 shadow-sm px-6 py-3 rounded-full font-bold text-gray-700">Regulated RCIC Leadership</span>
+                        <span className="bg-white border border-gray-200 shadow-sm px-6 py-3 rounded-full font-bold text-gray-700">Compliance-First Strategy</span>
+                        <span className="bg-white border border-gray-200 shadow-sm px-6 py-3 rounded-full font-bold text-gray-700">Transparent Advice</span>
+                        <span className="bg-white border border-gray-200 shadow-sm px-6 py-3 rounded-full font-bold text-gray-700">Strong Documentation</span>
+                        <span className="bg-white border border-gray-200 shadow-sm px-6 py-3 rounded-full font-bold text-gray-700">Genuine Client Care</span>
                     </div>
                 </section>
 
@@ -66,10 +133,14 @@ export default function OurPractice() {
     );
 }
 
-const ValueCard = ({ icon, title, desc }: any) => (
-    <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-        <div className="mb-4">{icon}</div>
-        <h4 className="font-bold text-lg text-gray-900 mb-2">{title}</h4>
-        <p className="text-sm text-gray-600">{desc}</p>
-    </div>
+const CredentialItem = ({ title, subtitle, icon }: any) => (
+    <li className="bg-white p-4 rounded-xl border border-blue-100 flex items-start sm:items-center gap-4">
+        <div className="bg-abic-blue/10 p-2 rounded-lg text-abic-blue shrink-0 text-xl font-bold">
+            {icon || "📜"}
+        </div>
+        <div>
+            <span className="font-bold text-gray-900 block">{title}</span>
+            <span className="text-sm text-gray-500">{subtitle}</span>
+        </div>
+    </li>
 );

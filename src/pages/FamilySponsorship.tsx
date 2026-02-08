@@ -1,4 +1,5 @@
 import ServiceLayout from "../components/ServiceLayout";
+import ServiceContent from "../components/ServiceContent";
 import { Heart, Users, ShieldCheck, Baby } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -11,15 +12,28 @@ export default function FamilySponsorship() {
         >
             <div className="space-y-16">
 
+                <ServiceContent
+                    what="Family Sponsorship allows Canadian citizens and permanent residents to sponsor their loved ones (spouse, partner, children, parents) to become permanent residents of Canada. It is a top priority for the Canadian government but involves a rigorous verification process to prove genuine relationships."
+                    who={[
+                        "Spouses, Common-law, or Conjugal partners",
+                        "Dependent children (under 22)",
+                        "Parents and Grandparents (via PGP lottery)",
+                        "Orphaned relatives (in specific circumstances)"
+                    ]}
+                    risks={[
+                        "Refusal due to lack of proof of a 'genuine relationship' (marriage of convenience)",
+                        "Sponsor ineligibility (financial issues, criminal record, previous sponsorships)",
+                        "Failure to disclose previous marital history or dependents",
+                        "3-year financial undertaking is legally binding even in divorce"
+                    ]}
+                />
+
                 {/* 1. SPOUSAL SPONSORSHIP */}
                 <section>
                     <div className="flex items-center gap-3 mb-6">
                         <div className="p-3 bg-red-50 rounded-lg text-abic-red"><Heart size={24} /></div>
-                        <h2 className="text-3xl font-montserrat font-bold text-gray-900">Spousal Sponsorship</h2>
+                        <h2 className="text-3xl font-montserrat font-bold text-gray-900">Spousal Sponsorship Types</h2>
                     </div>
-                    <p className="text-gray-600 leading-relaxed mb-8">
-                        Canadian citizens and permanent residents can sponsor their spouse, common-law partner, or conjugal partner to become permanent residents.
-                    </p>
 
                     <div className="grid md:grid-cols-2 gap-8">
                         <div className="space-y-6">

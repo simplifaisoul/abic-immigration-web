@@ -1,4 +1,5 @@
 import ServiceLayout from "../components/ServiceLayout";
+import ServiceContent from "../components/ServiceContent";
 import { Flag, Award, BookOpen, UserCheck, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -11,15 +12,28 @@ export default function PRCitizenship() {
         >
             <div className="space-y-16">
 
+                <ServiceContent
+                    what="Permanent Residence (PR) allows you to live, work, and study in Canada indefinitely, while Canadian Citizenship grants you the right to vote, run for office, and hold a passport. Transitioning from PR to Citizen is the final milestone in your immigration journey."
+                    who={[
+                        "PR card holders ready to renew",
+                        "Permanent Residents eligible for Citizenship (3 years physical presence)",
+                        "Individuals requiring PR Card replacements (lost/stolen)",
+                        "Those seeking to clarify residency obligations"
+                    ]}
+                    risks={[
+                        "Failing to meet the residency obligation (730 days in 5 years)",
+                        "Criminal inadmissibility affecting PR status",
+                        "Miscalculating physical presence days for citizenship",
+                        "Travelling with an expired PR card"
+                    ]}
+                />
+
                 {/* 1. PERMANENT RESIDENCE */}
                 <section>
                     <div className="flex items-center gap-3 mb-6">
                         <div className="p-3 bg-abic-blue/10 rounded-lg text-abic-blue"><Award size={24} /></div>
                         <h2 className="text-3xl font-montserrat font-bold text-gray-900">Permanent Residence (PR)</h2>
                     </div>
-                    <p className="text-gray-600 leading-relaxed mb-8">
-                        Permanent residence gives you the right to live, work, and study in Canada indefinitely, and puts you on the path to citizenship.
-                    </p>
 
                     <div className="grid md:grid-cols-2 gap-8 mb-8">
                         <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
@@ -87,7 +101,7 @@ export default function PRCitizenship() {
     );
 }
 
-const EligibilityCard = ({ icon, title, desc }: any) => (
+const EligibilityCard = ({ icon, title, desc }: { icon: React.ReactNode, title: string, desc: string }) => (
     <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
         <div className="mb-4">{icon}</div>
         <h4 className="font-bold text-gray-900 mb-2">{title}</h4>

@@ -1,4 +1,5 @@
 import ServiceLayout from "../components/ServiceLayout";
+import ServiceContent from "../components/ServiceContent";
 import { CheckCircle2, TrendingUp, Award, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -11,13 +12,21 @@ export default function ExpressEntry() {
         >
             <div className="space-y-16">
 
-                {/* INTRO */}
-                <section className="text-center max-w-3xl mx-auto">
-                    <h2 className="text-3xl font-bold font-montserrat text-gray-900 mb-6">Your Ticket to Canada</h2>
-                    <p className="text-gray-600 leading-relaxed">
-                        Express Entry is an online system used to manage applications for permanent residence from skilled workers. It involves a points-based ranking system (CRS). We help you maximize your score to receive an Invitation to Apply (ITA).
-                    </p>
-                </section>
+                <ServiceContent
+                    what="Express Entry is an online application management system used by Immigration, Refugees and Citizenship Canada (IRCC) to select candidates for permanent residence. It manages applications for the Federal Skilled Worker (FSW), Canadian Experience Class (CEC), and Federal Skilled Trades (FST) programs."
+                    who={[
+                        "Skilled workers with foreign or Canadian work experience",
+                        "International graduates from Canadian institutions",
+                        "Skilled tradespersons with valid job offers or certification",
+                        "Provincial Nominees (PNP holders)"
+                    ]}
+                    risks={[
+                        "Inaccurate CRS score calculation (claiming points for unverified education/work)",
+                        "Falling below the CRS cutoff score in a draw",
+                        "Misrepresentation (innocent mistakes can lead to a 5-year ban)",
+                        "Incomplete documents uploaded after recieving an ITA"
+                    ]}
+                />
 
                 {/* 1. FEDERAL SKILLED WORKER (FSW) */}
                 <section className="grid md:grid-cols-2 gap-12 items-center">

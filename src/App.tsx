@@ -1,8 +1,8 @@
+// Main App Component
 import { Routes, Route } from "react-router-dom";
 import { Header, Footer } from "./components/Layout";
 import TextureOverlay from "./components/TextureOverlay";
 import Home from "./pages/Home";
-// import About from "./pages/About"; // Keep for legacy /about root if needed, or redirect
 import BookConsultation from "./pages/BookConsultation";
 import Contact from "./pages/Contact";
 import ServicesOverview from "./pages/ServicesOverview";
@@ -13,64 +13,55 @@ import VerifyStatus from "./pages/about/VerifyStatus";
 import Reviews from "./pages/about/Reviews";
 import Ethics from "./pages/about/Ethics";
 
-import ExpressEntry from "./pages/ExpressEntry";
-import PRCitizenship from "./pages/PRCitizenship";
-import FamilySponsorship from "./pages/FamilySponsorship";
-import EmployersLMIA from "./pages/EmployersLMIA";
-import WorkPermit from "./pages/WorkPermit";
-import EOOffice from "./pages/EOOffice";
+// Visitor
+import { VisitorVisaApplication, VisitorVisaExtension, VisitorVisaRefusals } from "./pages/visitor";
+
+// Study
+import { StudyApplication, StudyExtension, StudyRefusals } from "./pages/study";
+
+// Work
+import { WorkPermitOverview, WorkPermitExtension, PGWP, WorkPermit } from "./pages/work-permit";
+
+// Express Entry
+import { FSW, CEC, FST, ExpressEntry } from "./pages/express-entry";
+
+// PR & Citizenship
+import { PR, Citizenship, PRCitizenship } from "./pages/pr-citizenship";
+
+// Family
+import { FamilySponsorship, SpousalSponsorship, CommonLaw, SameSex } from "./pages/family-sponsorship";
+
+// Employer
+import { EmployersLMIA, LMIA, Recruitment, EmployerCompliance } from "./pages/employers-lmia";
+
+// Students
+import {
+  WaterlooOverview, WaterlooStudyPermit, WaterlooExtension, WaterlooPGWP, WaterlooWorkWhileStudying, WaterlooRefusals, WaterlooLocalSupport
+} from "./pages/students-waterloo";
+
+import {
+  GuelphOverview, GuelphStudyPermit, GuelphExtension, GuelphPGWP, GuelphWorkWhileStudying, GuelphRefusals, GuelphLocalSupport
+} from "./pages/students-guelph";
+
+import Fees from "./pages/Fees";
+import MasterClass from "./pages/MasterClass";
 import Resources from "./pages/Resources";
-import VisitorVisaApplication from "./pages/visitor/Application";
-import VisitorVisaExtension from "./pages/visitor/Extension";
-import VisitorVisaRefusals from "./pages/visitor/Refusals";
-import StudyApplication from "./pages/study/Application";
-import StudyExtension from "./pages/study/Extension";
-import StudyRefusals from "./pages/study/Refusals";
-
-import WaterlooOverview from "./pages/students-waterloo/Overview";
-import WaterlooPGWP from "./pages/students-waterloo/PGWP";
-import WaterlooStudyPermit from "./pages/students-waterloo/StudyPermit";
-import WaterlooExtension from "./pages/students-waterloo/Extension";
-import WaterlooWorkWhileStudying from "./pages/students-waterloo/WorkWhileStudying";
-import WaterlooRefusals from "./pages/students-waterloo/Refusals";
-import WaterlooLocalSupport from "./pages/students-waterloo/LocalSupport";
-
-import GuelphOverview from "./pages/students-guelph/Overview";
-import GuelphStudyPermit from "./pages/students-guelph/StudyPermit";
-import GuelphExtension from "./pages/students-guelph/Extension";
-import GuelphPGWP from "./pages/students-guelph/PGWP";
-import GuelphWorkWhileStudying from "./pages/students-guelph/WorkWhileStudying";
-import GuelphRefusals from "./pages/students-guelph/Refusals";
-import GuelphLocalSupport from "./pages/students-guelph/LocalSupport";
-
-import WorkPermitOverview from "./pages/work-permit/Overview";
-import WorkPermitExtension from "./pages/work-permit/Extension";
-import PGWP from "./pages/work-permit/PGWP";
-
-import FSW from "./pages/express-entry/FSW";
-import CEC from "./pages/express-entry/CEC";
-import FST from "./pages/express-entry/FST";
-
-import PR from "./pages/pr-citizenship/PR";
-import Citizenship from "./pages/pr-citizenship/Citizenship";
-
-import SpousalSponsorship from "./pages/family-sponsorship/Spousal";
-import CommonLaw from "./pages/family-sponsorship/CommonLaw";
-import SameSex from "./pages/family-sponsorship/SameSex";
-
-import LMIA from "./pages/employers/LMIA";
-import Recruitment from "./pages/employers/Recruitment";
-import EmployerCompliance from "./pages/employers/Compliance";
+import EOOffice from "./pages/EOOffice";
 
 function App() {
   return (
     <div className="bg-gray-50 min-h-screen font-inter relative">
       <TextureOverlay />
+
+      {/* Header handled inside internal layout but we can keep it here if Header contains TopBar */}
       <Header />
 
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/fees" element={<Fees />} />
+          <Route path="/master-class" element={<MasterClass />} />
+
           <Route path="/about" element={<OurPractice />} />
 
           {/* Sub Pages */}
@@ -86,7 +77,6 @@ function App() {
           {/* Contact */}
           <Route path="/contact" element={<Contact />} />
 
-          {/* Services */}
           {/* Services - Visitor Visa */}
           <Route path="/visitor-visa/application" element={<VisitorVisaApplication />} />
           <Route path="/visitor-visa/extension" element={<VisitorVisaExtension />} />

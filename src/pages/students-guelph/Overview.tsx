@@ -1,5 +1,6 @@
 import ServiceLayout from "../../components/ServiceLayout";
 import { Share2, BookOpen, Clock } from "lucide-react";
+import StudentConsultationFees from "../../components/StudentConsultationFees";
 
 export default function GuelphOverview() {
     return (
@@ -32,6 +33,8 @@ export default function GuelphOverview() {
                         </div>
                     </div>
                 </section>
+
+                <StudentConsultationFees />
             </div>
         </ServiceLayout>
     );

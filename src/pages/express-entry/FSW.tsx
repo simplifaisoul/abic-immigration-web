@@ -1,5 +1,6 @@
 import ServiceLayout from "../../components/ServiceLayout";
-import { Calculator, Globe2 } from "lucide-react";
+import ServiceContent from "../../components/ServiceContent";
+import { Calculator } from "lucide-react";
 
 export default function FSW() {
     return (
@@ -10,15 +11,20 @@ export default function FSW() {
         >
             <div className="space-y-12">
 
-                <div className="flex gap-8 items-center bg-gray-900 text-white p-8 rounded-2xl">
-                    <Globe2 size={64} className="text-abic-blue hidden md:block" />
-                    <div>
-                        <h2 className="text-2xl font-bold mb-2">Foreign Work Experience?</h2>
-                        <p className="text-gray-300 leading-relaxed">
-                            FSW is designed for individuals with at least **1 year of continuous full-time** skilled work experience outside Canada. You do not need a job offer to apply, but you must meet the 67-point selection grid.
-                        </p>
-                    </div>
-                </div>
+                <ServiceContent
+                    what="The Federal Skilled Worker (FSW) program is a flagship pathway to Permanent Residence for skilled workers with foreign work experience. It is point-based and does not require a job offer, though having one increases your points."
+                    who={[
+                        "Professionals with at least 1 year of continuous full-time skilled work experience",
+                        "Individuals who meet the minimum language requirements (CLB 7)",
+                        "Candidates scoring at least 67/100 on the selection factors grid"
+                    ]}
+                    risks={[
+                        "Ineligibility due to falling below 67 points (often language or funds)",
+                        "Incomplete or generic work reference letters",
+                        "Discrepancies between primary NOC and actual duties",
+                        "Insufficient Proof of Funds for settlement"
+                    ]}
+                />
 
                 <section>
                     <h2 className="text-2xl font-bold text-gray-900 mb-6">Selection Criteria (67 Points)</h2>
@@ -47,7 +53,7 @@ export default function FSW() {
     );
 }
 
-const PointCard = ({ title, desc, max }: any) => (
+const PointCard = ({ title, desc, max }: { title: string, desc: string, max: string }) => (
     <div className="p-5 border border-gray-100 rounded-xl bg-white shadow-sm hover:border-abic-blue transition-colors group">
         <h3 className="font-bold text-gray-900 mb-1 group-hover:text-abic-blue transition-colors">{title}</h3>
         <p className="text-xs text-gray-500 mb-3">{desc}</p>

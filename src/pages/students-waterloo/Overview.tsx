@@ -1,6 +1,7 @@
 import ServiceLayout from "../../components/ServiceLayout";
 import { Link } from "react-router-dom";
 import { BookOpen, MapPin, Users } from "lucide-react";
+import StudentConsultationFees from "../../components/StudentConsultationFees";
 
 export default function WaterlooOverview() {
     return (
@@ -48,6 +49,7 @@ export default function WaterlooOverview() {
                     </div>
                 </section>
 
+                <StudentConsultationFees />
             </div>
         </ServiceLayout>
     );

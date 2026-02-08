@@ -1,5 +1,5 @@
 import ServiceLayout from "../../components/ServiceLayout";
-import { GraduationCap, DollarSign, FileCheck } from "lucide-react";
+import ServiceContent from "../../components/ServiceContent";
 
 export default function StudyApplication() {
     return (
@@ -10,32 +10,21 @@ export default function StudyApplication() {
         >
             <div className="space-y-12">
 
-                {/* Intro */}
-                <section>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Studying in Canada</h2>
-                    <p className="text-gray-600 leading-relaxed mb-6">
-                        A Study Permit authorizes foreign nationals to study at Designated Learning Institutions (DLIs) in Canada. It is more than just a visa; it is a pathway to future work opportunities and potentially Permanent Residence.
-                    </p>
-                </section>
-
-                {/* Key Requirements */}
-                <section className="grid md:grid-cols-3 gap-6">
-                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                        <GraduationCap className="text-abic-blue mb-4" size={32} />
-                        <h3 className="font-bold text-gray-900 mb-2">Acceptance Letter</h3>
-                        <p className="text-sm text-gray-500">Must be from a Designated Learning Institution (DLI).</p>
-                    </div>
-                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                        <DollarSign className="text-abic-blue mb-4" size={32} />
-                        <h3 className="font-bold text-gray-900 mb-2">Proof of Funds</h3>
-                        <p className="text-sm text-gray-500">Tuition + $20,635 (for single applicant) per year.</p>
-                    </div>
-                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                        <FileCheck className="text-abic-blue mb-4" size={32} />
-                        <h3 className="font-bold text-gray-900 mb-2">Study Plan</h3>
-                        <p className="text-sm text-gray-500">Clear logic on why this specific course helps your career home.</p>
-                    </div>
-                </section>
+                {/* Standardized Content */}
+                <ServiceContent
+                    what="A Study Permit is an official document issued by Immigration, Refugees and Citizenship Canada (IRCC) that authorizes foreign nationals to study at Designated Learning Institutions (DLIs) in Canada. It allows you to gain world-class education and potentially qualify for work permits and permanent residence."
+                    who={[
+                        "International students accepted into a DLI",
+                        "Individuals wanting to upskill or change careers",
+                        "Minors accompanying parents who are working or studying in Canada"
+                    ]}
+                    risks={[
+                        "High refusal rates for 'unclear study plans' or 'career progression' logic",
+                        "Insufficient proof of funds (tuition + $20,635/year + travel)",
+                        "Misinterpreting 'dual intent' (wanting to study vs. stay permanently)",
+                        "Applying to non-eligible PGWP programs"
+                    ]}
+                />
 
                 {/* Process */}
                 <section className="bg-gray-50 p-8 rounded-2xl">

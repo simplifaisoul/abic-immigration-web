@@ -1,4 +1,5 @@
 import ServiceLayout from "../components/ServiceLayout";
+import ServiceContent from "../components/ServiceContent";
 import { Briefcase, CheckSquare, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -11,15 +12,28 @@ export default function EmployersLMIA() {
         >
             <div className="space-y-16">
 
+                <ServiceContent
+                    what="A Labour Market Impact Assessment (LMIA) is a document that an employer in Canada typically needs before hiring a foreign worker. A positive LMIA confirms there is a need for a foreign worker to fill the job and that no Canadian worker or permanent resident is available to do the job."
+                    who={[
+                        "Canadian employers unable to find local talent",
+                        "Foreign workers seeking employer-specific work permits",
+                        "Entrepreneurs wanting to start a business in Canada (Owner/Operator)",
+                        "Families hiring in-home caregivers"
+                    ]}
+                    risks={[
+                        "Rejection for non-compliant advertising (Job Bank strictness)",
+                        "Employer blacklisting due to past non-compliance",
+                        "Hiring for a position with specific wage requirements (High vs. Low wage)",
+                        "Audit triggers from ESDC"
+                    ]}
+                />
+
                 {/* 1. LMIA PROCESS */}
                 <section>
                     <div className="flex items-center gap-3 mb-6">
                         <div className="p-3 bg-abic-blue/10 rounded-lg text-abic-blue"><Briefcase size={24} /></div>
-                        <h2 className="text-3xl font-montserrat font-bold text-gray-900">What is an LMIA?</h2>
+                        <h2 className="text-3xl font-montserrat font-bold text-gray-900">The 3-Step Process</h2>
                     </div>
-                    <p className="text-gray-600 leading-relaxed mb-8">
-                        A Labour Market Impact Assessment (LMIA) is a document that an employer in Canada may need to get before hiring a foreign worker. A positive LMIA will show that there is a need for a foreign worker to fill the job and that no Canadian worker is available to do the job.
-                    </p>
 
                     <div className="grid md:grid-cols-3 gap-6">
                         <StepCard
@@ -95,7 +109,7 @@ export default function EmployersLMIA() {
     );
 }
 
-const StepCard = ({ number, title, desc }: any) => (
+const StepCard = ({ number, title, desc }: { number: string, title: string, desc: string }) => (
     <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
         <div className="text-6xl font-black text-gray-50 absolute -top-4 -right-4 transition-colors group-hover:text-blue-50">{number}</div>
         <div className="relative z-10">
