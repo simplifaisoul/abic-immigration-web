@@ -2,12 +2,9 @@ import ServiceLayout from "../../components/ServiceLayout";
 
 const HERO_IMAGE = "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=2000";
 
-export const WaterlooOverview = () => (
-    <ServiceLayout title="Students in Waterloo Region" subtitle="Local support for UW, Laurier, and Conestoga students." heroImage={HERO_IMAGE}>
-        <h3 className="text-xl font-bold">Your Local Immigration Partners</h3>
-        <p>Book a consultation at our Waterloo office.</p>
-    </ServiceLayout>
-);
+export { default as WaterlooLanding } from "./WaterlooLanding";
+// Replace the main "Overview" export with the Landing page
+export { default as WaterlooOverview } from "./WaterlooLanding";
 
 export const WaterlooStudyPermit = () => (
     <ServiceLayout title="Study Permit Services (Waterloo)" subtitle="Focused on local institution requirements." heroImage={HERO_IMAGE}>

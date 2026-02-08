@@ -21,7 +21,7 @@ export default function OurPractice() {
                     {/* Photo */}
                     <div className="w-full md:w-1/3 shrink-0">
                         <img
-                            src="/assets/anthony-cheah.png"
+                            src="/assets/anthony-professional.jpg"
                             alt="Anthony Wai Kean Cheah, RCIC"
                             className="w-full rounded-2xl shadow-xl border-4 border-white"
                         />
@@ -131,13 +131,56 @@ export default function OurPractice() {
                     </div>
                 </section>
 
-                {/* 5.5. CREDENTIAL BADGES */}
-                <section className="text-center py-8">
-                    <p className="text-gray-400 text-sm font-bold uppercase tracking-widest mb-6">Accreditations & Memberships</p>
-                    <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-90">
-                        <img src="/assets/logos/CICC logo.png" alt="CICC Regulated" className="h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
-                        <img src="/assets/logos/capic.jpg" alt="CAPIC Member" className="h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
-                        <img src="/assets/logos/ICEF.jpeg" alt="ICEF Agent" className="h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                {/* 5.5. CREDENTIAL BADGES - ENHANCED */}
+                <section className="text-center py-16 bg-gradient-to-br from-gray-50 to-white rounded-3xl border-2 border-gray-200 shadow-lg">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Professional Accreditations</h3>
+                    <p className="text-gray-500 text-sm mb-12 max-w-2xl mx-auto">Regulated, certified, and recognized by leading immigration and education bodies</p>
+
+                    {/* Regulatory Bodies - LARGER & MORE PROMINENT */}
+                    <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 mb-12">
+                        <div className="group">
+                            <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-abic-blue">
+                                <img src="/assets/logos/CICC logo.png" alt="CICC Regulated" className="h-28 md:h-32 object-contain group-hover:scale-110 transition-transform duration-300" />
+                            </div>
+                            <p className="text-xs text-gray-500 mt-3 font-semibold">CICC Regulated</p>
+                        </div>
+                        <div className="group">
+                            <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-abic-blue">
+                                <img src="/assets/logos/capic.jpg" alt="CAPIC Member" className="h-24 md:h-28 object-contain group-hover:scale-110 transition-transform duration-300" />
+                            </div>
+                            <p className="text-xs text-gray-500 mt-3 font-semibold">CAPIC Member</p>
+                        </div>
+                        <div className="group">
+                            <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-abic-blue">
+                                <img src="/assets/logos/ICEF.jpeg" alt="ICEF Agent" className="h-24 md:h-28 object-contain group-hover:scale-110 transition-transform duration-300" />
+                            </div>
+                            <p className="text-xs text-gray-500 mt-3 font-semibold">ICEF Certified</p>
+                        </div>
+                    </div>
+
+                    {/* Verify Button */}
+                    <div className="mb-12">
+                        <a
+                            href="https://college-ic.ca/protecting-the-public/find-an-immigration-consultant"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-3 bg-abic-blue text-white font-bold px-8 py-4 rounded-full hover:bg-abic-gold hover:text-abic-blue transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
+                        >
+                            <span className="bg-white/20 p-1 rounded-full"><img src="/assets/logos/CICC logo.png" className="h-6 w-6 brightness-0 invert" /></span>
+                            Verify RCIC Status: R511743
+                        </a>
+                    </div>
+
+                    {/* Universities */}
+                    <div className="border-t border-gray-200 pt-8 max-w-2xl mx-auto">
+                        <p className="text-gray-400 text-xs font-bold uppercase mb-6">Academic Background</p>
+                        <div className="flex flex-wrap justify-center items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                            {/* As requested: University Badges */}
+                            <img src="/assets/logos/Ashton-Logo.png" alt="Ashton College" className="h-10 object-contain" />
+                            {/* Using text fallback for others if logos missing, or generic icons */}
+                            <div className="flex items-center gap-2 font-bold text-gray-500"><span className="text-2xl">🎓</span> McMaster University</div>
+                            <div className="flex items-center gap-2 font-bold text-gray-500"><span className="text-2xl">🏛️</span> University of Guelph</div>
+                        </div>
                     </div>
                 </section>
 

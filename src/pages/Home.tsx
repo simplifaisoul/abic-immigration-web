@@ -51,13 +51,13 @@ export default function Home() {
             {/* 2. TRUST & RECOGNITION BADGES */}
             <section className="bg-white py-12 border-b border-gray-100">
                 <div className="container mx-auto px-4">
-                    <p className="text-center text-gray-400 text-sm font-bold uppercase tracking-widest mb-8">Trusted & Recognized By</p>
-                    <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-80 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 duration-300">
-                        {/* Using local assets where found, generic placeholders where specific files missing */}
-                        <img src="/assets/cicc-logo-new.png" alt="CICC Regulated" className="h-16 object-contain" />
-                        <img src="/assets/logos/capic.jpg" alt="CAPIC Member" className="h-14 object-contain" />
-                        <img src="/assets/logos/ICEF.jpeg" alt="ICEF Agent" className="h-14 object-contain" />
-                        <img src="/assets/logos/Ashton-Logo.png" alt="Ashton College" className="h-12 object-contain" />
+                    <p className="text-center text-gray-400 text-sm font-bold uppercase tracking-widest mb-10">Trusted & Recognized By</p>
+                    <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-90 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 duration-500">
+                        {/* Enlarged Logos for Impact */}
+                        <img src="/assets/cicc-logo-new.png" alt="CICC Regulated" className="h-24 md:h-32 object-contain hover:scale-110 transition-transform duration-300" />
+                        <img src="/assets/logos/capic.jpg" alt="CAPIC Member" className="h-20 md:h-28 object-contain hover:scale-110 transition-transform duration-300" />
+                        <img src="/assets/logos/ICEF.jpeg" alt="ICEF Agent" className="h-20 md:h-28 object-contain hover:scale-110 transition-transform duration-300" />
+                        <img src="/assets/logos/Ashton-Logo.png" alt="Ashton College" className="h-16 md:h-24 object-contain hover:scale-110 transition-transform duration-300" />
                     </div>
                 </div>
             </section>

@@ -2,12 +2,9 @@ import ServiceLayout from "../../components/ServiceLayout";
 
 const HERO_IMAGE = "https://images.unsplash.com/photo-1510936111840-65e151ad71bb?auto=format&fit=crop&q=80&w=2000";
 
-export const GuelphOverview = () => (
-    <ServiceLayout title="Students in Guelph Region" subtitle="Local support for UofG and Conestoga students." heroImage={HERO_IMAGE}>
-        <h3 className="text-xl font-bold">Your Local Immigration Partners</h3>
-        <p>Book a consultation at our Guelph office.</p>
-    </ServiceLayout>
-);
+export { default as GuelphLanding } from "./GuelphLanding";
+// Replace the main "Overview" export with the Landing page if that's what's used for routing
+export { default as GuelphOverview } from "./GuelphLanding";
 
 export const GuelphStudyPermit = () => (
     <ServiceLayout title="Study Permit Services (Guelph)" subtitle="Focused on local institution requirements." heroImage={HERO_IMAGE}>

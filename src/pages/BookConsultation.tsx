@@ -39,7 +39,7 @@ export default function BookConsultation() {
                             <span className="text-gray-400 text-sm mb-1">/ 60 mins</span>
                         </div>
 
-                        <a href="https://calendly.com/placeholder" className="block w-full py-4 bg-abic-red text-white font-bold text-center rounded hover:bg-red-700 transition-colors">
+                        <a href="/contact" className="block w-full py-4 bg-abic-blue text-white font-bold text-center rounded hover:bg-abic-blue/90 transition-colors">
                             Book Now
                         </a>
                     </div>
