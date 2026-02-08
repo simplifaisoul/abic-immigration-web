@@ -57,7 +57,7 @@ export default function Home() {
                         <img src="/assets/cicc-logo-new.png" alt="CICC Regulated" className="h-16 object-contain" />
                         <img src="/assets/logos/capic.jpg" alt="CAPIC Member" className="h-14 object-contain" />
                         <img src="/assets/logos/ICEF.jpeg" alt="ICEF Agent" className="h-14 object-contain" />
-                        <img src="/assets/logos/Ashton Logo.png" alt="Ashton College" className="h-12 object-contain" />
+                        <img src="/assets/logos/Ashton-Logo.png" alt="Ashton College" className="h-12 object-contain" />
                     </div>
                 </div>
             </section>
@@ -102,14 +102,14 @@ export default function Home() {
                         <SectionHeader title="Comprehensive Immigration Services" subtitle="Expert guidance for every step of your journey." />
 
                         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
-                            <ServiceCard title="Visitor Visa" icon="✈️" link="/services" />
-                            <ServiceCard title="Study Permit" icon="🎓" link="/services" />
-                            <ServiceCard title="Work Permit / PGWP" icon="💼" link="/services" />
-                            <ServiceCard title="Express Entry" icon="🍁" link="/services" />
-                            <ServiceCard title="Family Sponsorship" icon="👨‍👩‍👧‍👦" link="/services" />
-                            <ServiceCard title="LMIA Services" icon="🏢" link="/services" />
-                            <ServiceCard title="Refusals & Appeals" icon="⚖️" link="/services" />
-                            <ServiceCard title="H&C Applications" icon="❤️" link="/services" />
+                            <ServiceCard title="Visitor Visa" icon="✈️" link="/visitor-visa" />
+                            <ServiceCard title="Study Permit" icon="🎓" link="/study-in-canada" />
+                            <ServiceCard title="Work Permit / PGWP" icon="💼" link="/work-permit" />
+                            <ServiceCard title="Express Entry" icon="🍁" link="/express-entry" />
+                            <ServiceCard title="Family Sponsorship" icon="👨‍👩‍👧‍👦" link="/family-sponsorship" />
+                            <ServiceCard title="LMIA Services" icon="🏢" link="/employers-lmia" />
+                            <ServiceCard title="Refusals & Appeals" icon="⚖️" link="/visitor-visa/refusals" />
+                            <ServiceCard title="H&C Applications" icon="❤️" link="/pr-citizenship" />
                         </div>
                     </div>
                 </div>

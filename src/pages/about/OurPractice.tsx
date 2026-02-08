@@ -1,13 +1,20 @@
 import ServiceLayout from "../../components/ServiceLayout";
 
+import { motion } from "framer-motion";
+
 export default function OurPractice() {
     return (
         <ServiceLayout
             title="Principal Consultant"
             subtitle="Regulated, Experienced, and Ethical Representation."
-            heroImage="/assets/misc/woman-sitting-on-gray-chair-1543895.jpg" // Using available asset as placeholder for Anthony's bg if plain color not preferred
+            heroImage="/assets/misc/woman-sitting-on-gray-chair-1543895.jpg"
         >
-            <div className="max-w-4xl mx-auto text-left space-y-12">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="max-w-4xl mx-auto text-left space-y-12"
+            >
 
                 {/* 1. ANTHONY CHEAH BIO */}
                 <section className="flex flex-col md:flex-row gap-8 items-start">
@@ -27,10 +34,15 @@ export default function OurPractice() {
 
                     {/* Content */}
                     <div className="flex-1 space-y-6">
-                        <h2 className="text-3xl font-bold text-gray-900 font-montserrat">About the Principal</h2>
+                        <h2 className="text-3xl font-bold text-gray-900 font-montserrat">About Us</h2>
                         <div className="prose prose-lg text-gray-600 leading-relaxed font-light">
                             <p className="mb-4">
-                                <strong>Anthony Cheah</strong> is a Regulated Canadian Immigration Consultant (RCIC) with <strong>over 13 years</strong> of professional experience advising individuals, families, international students, and employers on Canadian immigration matters. He is the Director and Principal Consultant of <strong>Above & Beyond Immigration Consultant (ABIC)</strong>, a practice known for its ethical standards, technical accuracy, and compliance-driven approach.
+                                <strong>Anthony Cheah, RCIC (R511743)</strong><br />
+                                Principal Consultant & Director<br />
+                                Above & Beyond Immigration Consultant (ABIC)
+                            </p>
+                            <p className="mb-4">
+                                Anthony Cheah is a Regulated Canadian Immigration Consultant (RCIC) with <strong>over 13 years</strong> of professional experience advising individuals, families, international students, and employers on Canadian immigration matters. He is the Director and Principal Consultant of <strong>Above & Beyond Immigration Consultant (ABIC)</strong>, a practice known for its ethical standards, technical accuracy, and compliance-driven approach.
                             </p>
                             <p>
                                 Anthony is widely respected for his ability to manage <strong>complex, high-risk, and sensitive immigration cases</strong>, including refusals, discretionary applications, and employer-compliance matters. His practice emphasizes realistic advice, strong documentation, and strict adherence to Canadian immigration law and policy.
@@ -90,7 +102,7 @@ export default function OurPractice() {
                             <li className="flex gap-3 items-center text-gray-800"><span className="w-2 h-2 bg-abic-gold rounded-full"></span> Former In-House Immigration Consultant, McMaster University</li>
                             <li className="flex gap-3 items-center text-gray-800"><span className="w-2 h-2 bg-abic-gold rounded-full"></span> CICC Mentor for new and aspiring RCICs</li>
                             <li className="flex gap-3 items-center text-gray-800"><span className="w-2 h-2 bg-abic-gold rounded-full"></span> Teaching Instructor, Ashton College (LMIA, Work Permits, TRV)</li>
-                            <li className="flex gap-3 items-center text-gray-800"><span className="w-2 h-2 bg-abic-gold rounded-full"></span> University-level instructor internationally (Canada, U.S., U.K., Malaysia, Australia)</li>
+                            <li className="flex gap-3 items-center text-gray-800"><span className="w-2 h-2 bg-abic-gold rounded-full"></span> University-level instructor internationally, including Canada, the U.S., the U.K., Malaysia, and Australia</li>
                         </ul>
                         <p className="mt-4 text-sm font-bold text-abic-blue uppercase tracking-wide">
                             These roles reflect his standing as both a practitioner and educator within the immigration field.
@@ -104,7 +116,7 @@ export default function OurPractice() {
                     <div className="relative z-10">
                         <h3 className="text-2xl font-bold mb-6 text-white font-montserrat">Professional Reputation</h3>
                         <p className="text-white/80 mb-8 max-w-2xl text-lg font-light">
-                            Clients and peers consistently describe Anthony as knowledgeable, professional, ethical, and transparent. His reputation is built on <span className="text-abic-gold font-bold">long-term trust, compliance, and consistency</span>, rather than volume-based or sales-driven outcomes.
+                            Clients and peers consistently describe Anthony as knowledgeable, professional, ethical, and transparent. He is frequently praised for:
                         </p>
                         <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
                             <li className="flex gap-3 items-center text-white/90"><span className="text-abic-gold">★</span> Clear and practical explanations</li>
@@ -113,6 +125,9 @@ export default function OurPractice() {
                             <li className="flex gap-3 items-center text-white/90"><span className="text-abic-gold">★</span> Honest advice with realistic expectations</li>
                             <li className="flex gap-3 items-center text-white/90"><span className="text-abic-gold">★</span> Avoidance of false promises</li>
                         </div>
+                        <p className="mt-6 text-sm text-white/60">
+                            His reputation is built on long-term trust, compliance, and consistency, rather than volume-based or sales-driven outcomes.
+                        </p>
                     </div>
                 </section>
 
@@ -120,15 +135,15 @@ export default function OurPractice() {
                 <section className="text-center py-8">
                     <h3 className="text-2xl font-bold text-gray-900 mb-8 font-montserrat">Why Clients Choose ABIC</h3>
                     <div className="flex flex-wrap justify-center gap-4">
-                        <span className="bg-white border border-gray-200 shadow-sm px-6 py-3 rounded-full font-bold text-gray-700">Regulated RCIC Leadership</span>
-                        <span className="bg-white border border-gray-200 shadow-sm px-6 py-3 rounded-full font-bold text-gray-700">Compliance-First Strategy</span>
-                        <span className="bg-white border border-gray-200 shadow-sm px-6 py-3 rounded-full font-bold text-gray-700">Transparent Advice</span>
-                        <span className="bg-white border border-gray-200 shadow-sm px-6 py-3 rounded-full font-bold text-gray-700">Strong Documentation</span>
-                        <span className="bg-white border border-gray-200 shadow-sm px-6 py-3 rounded-full font-bold text-gray-700">Genuine Client Care</span>
+                        <span className="bg-white border border-gray-200 shadow-sm px-6 py-3 rounded-full font-bold text-gray-700">Regulated and experienced RCIC leadership</span>
+                        <span className="bg-white border border-gray-200 shadow-sm px-6 py-3 rounded-full font-bold text-gray-700">Compliance-first, risk-aware strategy</span>
+                        <span className="bg-white border border-gray-200 shadow-sm px-6 py-3 rounded-full font-bold text-gray-700">Transparent advice and realistic assessments</span>
+                        <span className="bg-white border border-gray-200 shadow-sm px-6 py-3 rounded-full font-bold text-gray-700">Strong documentation and preparation</span>
+                        <span className="bg-white border border-gray-200 shadow-sm px-6 py-3 rounded-full font-bold text-gray-700">Genuine client care from consultation to decision</span>
                     </div>
                 </section>
 
-            </div>
+            </motion.div>
         </ServiceLayout>
     );
 }

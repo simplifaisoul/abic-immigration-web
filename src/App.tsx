@@ -47,6 +47,7 @@ import Fees from "./pages/Fees";
 import MasterClass from "./pages/MasterClass";
 import Resources from "./pages/Resources";
 import EOOffice from "./pages/EOOffice";
+import StudentsLanding from "./pages/StudentsLanding";
 
 function App() {
   return (
@@ -62,10 +63,12 @@ function App() {
           <Route path="/fees" element={<Fees />} />
           <Route path="/master-class" element={<MasterClass />} />
 
+          {/* About Routes */}
           <Route path="/about" element={<OurPractice />} />
-
-          {/* Sub Pages */}
+          <Route path="/about/our-practice" element={<OurPractice />} /> {/* Added matching route */}
           <Route path="/why-choose-abic" element={<OurPractice />} />
+
+          <Route path="/services" element={<ServicesOverview />} /> {/* Fixed Route */}
           <Route path="/services-overview" element={<ServicesOverview />} />
 
           {/* About Us granular routes */}
@@ -76,6 +79,9 @@ function App() {
 
           {/* Contact */}
           <Route path="/contact" element={<Contact />} />
+
+          {/* Students Landing */}
+          <Route path="/students" element={<StudentsLanding />} />
 
           {/* Services - Visitor Visa */}
           <Route path="/visitor-visa/application" element={<VisitorVisaApplication />} />
