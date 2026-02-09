@@ -97,6 +97,25 @@ export const Header = () => {
                     <Link to="/contact" className="bg-abic-blue text-white px-6 py-2.5 rounded-full font-bold hover:bg-abic-blue/90 text-sm shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
                         Book Consultation
                     </Link>
+
+                    {/* Social Media Icons */}
+                    <div className="flex items-center gap-4 ml-6">
+                        <a href="#" className="text-gray-600 hover:text-abic-blue transition-colors" aria-label="Facebook">
+                            <Facebook size={20} />
+                        </a>
+                        <a href="#" className="text-gray-600 hover:text-abic-blue transition-colors" aria-label="Instagram">
+                            <Instagram size={20} />
+                        </a>
+                        <a href="#" className="text-gray-600 hover:text-abic-blue transition-colors" aria-label="LinkedIn">
+                            <Linkedin size={20} />
+                        </a>
+                        <a href="#" className="text-gray-600 hover:text-abic-blue transition-colors" aria-label="YouTube">
+                            <Youtube size={20} />
+                        </a>
+
+                        {/* Google Translate */}
+                        <div id="google_translate_element" className="ml-2"></div>
+                    </div>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -149,12 +168,6 @@ export const Footer = () => (
                     </p>
                     {/* CICC Badge */}
                     <CICCBadge size="md" showLabel variant="grayscale" />
-                    <div className="flex space-x-4">
-                        <a href="#" className="hover:text-white transition-colors"><Facebook size={20} /></a>
-                        <a href="#" className="hover:text-white transition-colors"><Instagram size={20} /></a>
-                        <a href="#" className="hover:text-white transition-colors"><Linkedin size={20} /></a>
-                        <a href="#" className="hover:text-white transition-colors"><Youtube size={20} /></a>
-                    </div>
                 </div>
 
                 {/* Locations */}
@@ -173,7 +186,7 @@ export const Footer = () => (
                             ></iframe>
                         </div>
                         <p className="text-xs text-gray-400">
-                            130 Dundas St E, Suite 303<br />Mississauga, ON L5A 3V8
+                            7111 Syntex Drive, 3rd Floor<br />Mississauga, ON L5N 8C3
                         </p>
                     </div>
 

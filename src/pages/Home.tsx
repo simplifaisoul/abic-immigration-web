@@ -76,8 +76,8 @@ export default function Home() {
                         <QuickTile
                             to="/services"
                             icon={<FileCheck size={32} />}
-                            title="Visa & Permits"
-                            desc="Visitor, Study, Work"
+                            title="Student Services"
+                            desc="International & Local"
                             color="bg-blue-700"
                         />
                         <QuickTile
