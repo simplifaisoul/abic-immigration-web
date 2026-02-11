@@ -40,8 +40,8 @@ export default function Contact() {
                         </div>
                         <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our Office</h3>
                         <p className="text-gray-600 mb-4">
-                            7111 Syntex Drive, 3rd Floor<br />
-                            Mississauga, ON L5N 8C3<br />
+                            130 Dundas St E Unit 303<br />
+                            Mississauga, ON L5A 1W7<br />
                             Canada
                         </p>
                         <a href="https://maps.google.com/?q=7111+Syntex+Drive,+Mississauga,+ON" target="_blank" rel="noreferrer" className="text-abic-blue font-bold text-sm hover:underline">

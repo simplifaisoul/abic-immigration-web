@@ -57,16 +57,14 @@ export const Header = () => {
         setIsOpen(false);
     }, [location.pathname]);
 
-    const navLinks = [
+    const navLinks: { name: string; path: string; label?: string }[] = [
         { name: "Home", path: "/" },
-        { name: "About ABIC", path: "/about/our-practice" },
+        { name: "About", path: "/about/our-practice" },
         { name: "Services", path: "/services" },
         { name: "Students", path: "/students" },
-        { name: "Fees & Consultations", path: "/fees" },
+        { name: "Fees", path: "/fees" },
         { name: "Resources", path: "/resources" },
         { name: "Contact", path: "/contact" },
-        { name: "eOFFICE", path: "/e-office", label: "Coming Soon" },
-        { name: "Master Class", path: "/master-class", label: "Coming Soon" },
     ];
 
     return (
@@ -78,7 +76,7 @@ export const Header = () => {
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden lg:flex items-center gap-8 font-medium text-gray-700">
+                <div className="hidden lg:flex items-center gap-6 font-medium text-gray-700">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
@@ -94,8 +92,8 @@ export const Header = () => {
                             <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-abic-gold transition-all duration-300 group-hover:w-full ${location.pathname === link.path ? "w-full" : ""} `}></span>
                         </Link>
                     ))}
-                    <Link to="/contact" className="bg-abic-blue text-white px-6 py-2.5 rounded-full font-bold hover:bg-abic-blue/90 text-sm shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
-                        Book Consultation
+                    <Link to="/contact" className="bg-abic-blue text-white px-5 py-2 rounded-full font-bold hover:bg-abic-blue/90 text-sm shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all whitespace-nowrap">
+                        Book Now
                     </Link>
 
                     {/* Social Media Icons */}
@@ -186,7 +184,7 @@ export const Footer = () => (
                             ></iframe>
                         </div>
                         <p className="text-xs text-gray-400">
-                            7111 Syntex Drive, 3rd Floor<br />Mississauga, ON L5N 8C3
+                            130 Dundas St E Unit 303<br />Mississauga, ON L5A 1W7
                         </p>
                     </div>
 

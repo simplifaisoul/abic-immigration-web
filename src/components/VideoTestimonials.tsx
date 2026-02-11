@@ -46,7 +46,7 @@ export default function VideoTestimonials() {
                     </video>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {testimonials.map((t) => (
                         <div key={t.id} className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
                             <div className="aspect-[9/16] bg-gray-900 relative">
