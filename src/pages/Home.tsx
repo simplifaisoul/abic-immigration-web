@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { GraduationCap, FileCheck, Globe, ShieldAlert, BadgeCheck, PlayCircle } from "lucide-react";
+import { GraduationCap, FileCheck, Globe, ShieldAlert, BadgeCheck, PlayCircle, Plane, Briefcase, Users, Building2, Gavel, Heart } from "lucide-react";
 import { motion } from "framer-motion";
 import VideoTestimonials from "../components/VideoTestimonials";
 import Testimonials from "../components/Testimonials";
@@ -49,11 +49,11 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 2. TRUST & RECOGNITION BADGES */}
-            <section className="bg-white py-12 border-b border-gray-100">
+            {/* 2. TRUST & RECOGNITION BADGES (Visual Polish: More Room) */}
+            <section className="bg-white py-20 border-b border-gray-100">
                 <div className="container mx-auto px-4">
-                    <p className="text-center text-gray-400 text-sm font-bold uppercase tracking-widest mb-10">Trusted & Recognized By</p>
-                    <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-90 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 duration-500">
+                    <p className="text-center text-gray-400 text-sm font-bold uppercase tracking-widest mb-16">Trusted & Recognized By</p>
+                    <div className="flex flex-wrap justify-center items-center gap-16 md:gap-32 opacity-90 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 duration-500">
                         {/* Enlarged Logos for Impact */}
                         <img src="/assets/cicc-logo-new.png" alt="CICC Regulated" className="h-24 md:h-32 object-contain hover:scale-110 transition-transform duration-300" />
                         <img src="/assets/logos/capic.jpg" alt="CAPIC Member" className="h-20 md:h-28 object-contain hover:scale-110 transition-transform duration-300" />
@@ -103,14 +103,14 @@ export default function Home() {
                         <SectionHeader title="Comprehensive Immigration Services" subtitle="Expert guidance for every step of your journey." />
 
                         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
-                            <ServiceCard title="Visitor Visa" icon="✈️" link="/visitor-visa" />
-                            <ServiceCard title="Study Permit" icon="🎓" link="/study-in-canada" />
-                            <ServiceCard title="Work Permit / PGWP" icon="💼" link="/work-permit" />
-                            <ServiceCard title="Express Entry" icon="🍁" link="/express-entry" />
-                            <ServiceCard title="Family Sponsorship" icon="👨‍👩‍👧‍👦" link="/family-sponsorship" />
-                            <ServiceCard title="LMIA Services" icon="🏢" link="/employers-lmia" />
-                            <ServiceCard title="Refusals & Appeals" icon="⚖️" link="/visitor-visa/refusals" />
-                            <ServiceCard title="H&C Applications" icon="❤️" link="/pr-citizenship" />
+                            <ServiceCard title="Visitor Visa" icon={<Plane size={40} className="text-abic-blue" />} link="/visitor-visa" />
+                            <ServiceCard title="Study Permit" icon={<GraduationCap size={40} className="text-abic-blue" />} link="/study-in-canada" />
+                            <ServiceCard title="Work Permit / PGWP" icon={<Briefcase size={40} className="text-abic-blue" />} link="/work-permit" />
+                            <ServiceCard title="Express Entry" icon={<Globe size={40} className="text-abic-blue" />} link="/express-entry" />
+                            <ServiceCard title="Family Sponsorship" icon={<Users size={40} className="text-abic-blue" />} link="/family-sponsorship" />
+                            <ServiceCard title="LMIA Services" icon={<Building2 size={40} className="text-abic-blue" />} link="/employers-lmia" />
+                            <ServiceCard title="Refusals & Appeals" icon={<Gavel size={40} className="text-abic-blue" />} link="/visitor-visa/refusals" />
+                            <ServiceCard title="H&C Applications" icon={<Heart size={40} className="text-abic-blue" />} link="/pr-citizenship" />
                         </div>
                     </div>
                 </div>
