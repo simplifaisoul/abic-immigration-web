@@ -50,10 +50,10 @@ export default function Home() {
             </section>
 
             {/* 2. TRUST & RECOGNITION BADGES (Visual Polish: More Room) */}
-            <section className="bg-white py-20 border-b border-gray-100">
+            <section className="bg-white pt-24 pb-52 border-b border-gray-100">
                 <div className="container mx-auto px-4">
-                    <p className="text-center text-gray-400 text-sm font-bold uppercase tracking-widest mb-16">Trusted & Recognized By</p>
-                    <div className="flex flex-wrap justify-center items-center gap-16 md:gap-32 opacity-90 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 duration-500">
+                    <p className="text-center text-gray-400 text-sm font-bold uppercase tracking-widest mb-20">Trusted & Recognized By</p>
+                    <div className="flex flex-wrap justify-center items-center gap-16 md:gap-40 opacity-90 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 duration-500">
                         {/* Enlarged Logos for Impact */}
                         <img src={`${import.meta.env.BASE_URL}assets/cicc-logo-new.png`} alt="CICC Regulated" className="h-24 md:h-32 object-contain hover:scale-110 transition-transform duration-300" />
                         <img src={`${import.meta.env.BASE_URL}assets/logos/capic.jpg`} alt="CAPIC Member" className="h-20 md:h-28 object-contain hover:scale-110 transition-transform duration-300" />
