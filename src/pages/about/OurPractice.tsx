@@ -43,7 +43,7 @@ export default function OurPractice() {
         <ServiceLayout
             title="Principal Consultant"
             subtitle="Regulated, Experienced, and Ethical Representation."
-            heroImage="/assets/misc/woman-sitting-on-gray-chair-1543895.jpg"
+            heroImage={`${import.meta.env.BASE_URL}assets/misc/woman-sitting-on-gray-chair-1543895.jpg`}
         >
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -58,7 +58,7 @@ export default function OurPractice() {
                         {/* Photo & Badge */}
                         <div className="w-full md:w-1/3 shrink-0 space-y-6">
                             <img
-                                src="/assets/anthony-professional.jpg"
+                                src={`${import.meta.env.BASE_URL}assets/anthony-professional.jpg`}
                                 alt="Anthony Wai Kean Cheah, RCIC"
                                 className="w-full rounded-2xl shadow-xl border-4 border-white"
                             />
@@ -68,7 +68,7 @@ export default function OurPractice() {
                                 <p className="text-xs text-gray-400 mt-2 uppercase tracking-wide font-bold">Principal Consultant & Director</p>
                             </div>
                             <div className="flex justify-center">
-                                <img src="/assets/cicc-logo-new.png" alt="CICC Regulated" className="h-32 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+                                <img src={`${import.meta.env.BASE_URL}assets/cicc-logo-new.png`} alt="CICC Regulated" className="h-32 object-contain opacity-90 hover:opacity-100 transition-opacity" />
                             </div>
                         </div>
 

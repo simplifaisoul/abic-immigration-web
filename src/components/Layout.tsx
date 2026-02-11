@@ -72,7 +72,7 @@ export const Header = () => {
             <div className="container mx-auto px-4 flex justify-between items-center">
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-3 group">
-                    <img src="/assets/logo-full.png" alt="ABIC Logo" className="h-12 w-auto transition-transform duration-300 group-hover:scale-105" />
+                    <img src={`${import.meta.env.BASE_URL}assets/logo-full.png`} alt="ABIC Logo" className="h-12 w-auto transition-transform duration-300 group-hover:scale-105" />
                 </Link>
 
                 {/* Desktop Menu */}
@@ -160,7 +160,7 @@ export const Footer = () => (
             <div className="grid md:grid-cols-4 gap-12 mb-16">
                 {/* Brand & Social */}
                 <div className="space-y-6">
-                    <img src="/assets/logo-full.png" alt="ABIC Logo" className="h-12 brightness-0 invert opacity-90" />
+                    <img src={`${import.meta.env.BASE_URL}assets/logo-full.png`} alt="ABIC Logo" className="h-12 brightness-0 invert opacity-90" />
                     <p className="text-sm leading-relaxed max-w-xs">
                         Regulated Canadian Immigration Consultants (RCIC). Providing ethical, accurate, and compliance-driven immigration strategies since 2017.
                     </p>

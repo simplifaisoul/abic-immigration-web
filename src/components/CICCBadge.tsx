@@ -27,7 +27,7 @@ export default function CICCBadge({
     return (
         <div className={`flex items-center gap-3 ${className}`}>
             <img
-                src="/assets/cicc-logo-new.png"
+                src={`${import.meta.env.BASE_URL}assets/cicc-logo-new.png`}
                 alt="CICC Regulated Immigration Consultant"
                 className={`${sizeClasses[size]} object-contain transition-all duration-300 ${variantClasses[variant]}`}
             />

@@ -202,7 +202,7 @@ export default function StudentsWaterloo() {
                     <div className="flex flex-col md:flex-row gap-8 items-start">
                         <div className="w-full md:w-1/3">
                             <img
-                                src="/assets/anthony-professional.jpg"
+                                src={`${import.meta.env.BASE_URL}assets/anthony-professional.jpg`}
                                 alt="Anthony Cheah RCIC"
                                 className="w-full rounded-2xl shadow-lg mb-4"
                             />

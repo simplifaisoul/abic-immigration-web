@@ -13,7 +13,7 @@ export default function Home() {
                 {/* Background Image: Group of International Students */}
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="/assets/misc/group-of-friends-hanging-out-933964.jpg"
+                        src={`${import.meta.env.BASE_URL}assets/misc/group-of-friends-hanging-out-933964.jpg`}
                         alt="International Students in Canada"
                         className="w-full h-full object-cover object-center"
                     />
@@ -55,10 +55,10 @@ export default function Home() {
                     <p className="text-center text-gray-400 text-sm font-bold uppercase tracking-widest mb-16">Trusted & Recognized By</p>
                     <div className="flex flex-wrap justify-center items-center gap-16 md:gap-32 opacity-90 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 duration-500">
                         {/* Enlarged Logos for Impact */}
-                        <img src="/assets/cicc-logo-new.png" alt="CICC Regulated" className="h-24 md:h-32 object-contain hover:scale-110 transition-transform duration-300" />
-                        <img src="/assets/logos/capic.jpg" alt="CAPIC Member" className="h-20 md:h-28 object-contain hover:scale-110 transition-transform duration-300" />
-                        <img src="/assets/logos/ICEF.jpeg" alt="ICEF Agent" className="h-20 md:h-28 object-contain hover:scale-110 transition-transform duration-300" />
-                        <img src="/assets/logos/Ashton-Logo.png" alt="Ashton College" className="h-16 md:h-24 object-contain hover:scale-110 transition-transform duration-300" />
+                        <img src={`${import.meta.env.BASE_URL}assets/cicc-logo-new.png`} alt="CICC Regulated" className="h-24 md:h-32 object-contain hover:scale-110 transition-transform duration-300" />
+                        <img src={`${import.meta.env.BASE_URL}assets/logos/capic.jpg`} alt="CAPIC Member" className="h-20 md:h-28 object-contain hover:scale-110 transition-transform duration-300" />
+                        <img src={`${import.meta.env.BASE_URL}assets/logos/ICEF.jpeg`} alt="ICEF Agent" className="h-20 md:h-28 object-contain hover:scale-110 transition-transform duration-300" />
+                        <img src={`${import.meta.env.BASE_URL}assets/logos/Ashton-Logo.png`} alt="Ashton College" className="h-16 md:h-24 object-contain hover:scale-110 transition-transform duration-300" />
                     </div>
                 </div>
             </section>
@@ -151,7 +151,7 @@ export default function Home() {
                                     <PlayCircle size={32} className="text-abic-blue ml-1" />
                                 </span>
                             </div>
-                            <img src="/assets/misc/people-looking-at-laptop-computer-1595391.jpg" alt="Video Thumbnail" className="w-full h-full object-cover" />
+                            <img src={`${import.meta.env.BASE_URL}assets/misc/people-looking-at-laptop-computer-1595391.jpg`} alt="Video Thumbnail" className="w-full h-full object-cover" />
                         </div>
                         <p className="text-gray-600 text-sm mb-6 italic">"Anthony helped me restore my status when I thought all was lost. Highly recommended for complex cases." — Javier</p>
                         <Link to="/about/reviews" className="text-abic-blue font-bold hover:underline text-sm block text-center">

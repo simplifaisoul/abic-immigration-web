@@ -26,7 +26,7 @@ export default function About() {
                     <div>
                         <div className="relative mb-8 inline-block">
                             <img
-                                src="/assets/anthony-cheah.png"
+                                src={`${import.meta.env.BASE_URL}assets/anthony-cheah.png`}
                                 alt="Anthony Cheah RCIC"
                                 className="w-32 h-32 object-cover rounded-xl shadow-lg border-2 border-white"
                             />

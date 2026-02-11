@@ -6,25 +6,25 @@ const testimonials = [
         id: 1,
         name: "Javier",
         role: "Permanent Resident",
-        video: "/assets/videos/testimonial-javier.mp4"
+        video: `${import.meta.env.BASE_URL}assets/videos/testimonial-javier.mp4`
     },
     {
         id: 2,
         name: "Peng Yin",
         role: "Study Permit -> PGWP",
-        video: "/assets/videos/testimonial-peng-yin.mp4"
+        video: `${import.meta.env.BASE_URL}assets/videos/testimonial-peng-yin.mp4`
     },
     {
         id: 3,
         name: "Yusuf",
         role: "Business Immigration",
-        video: "/assets/videos/testimonial-yusuf.mp4"
+        video: `${import.meta.env.BASE_URL}assets/videos/testimonial-yusuf.mp4`
     },
     {
         id: 4,
         name: "Annabelle",
         role: "Study Permit Extension",
-        video: "/assets/videos/testimonial-anabelle.mp4"
+        video: `${import.meta.env.BASE_URL}assets/videos/testimonial-anabelle.mp4`
     }
 ];
 
@@ -89,7 +89,7 @@ export default function VideoTestimonials() {
                     <video
                         className="w-full h-full object-cover"
                         controls
-                        src="/assets/abic-corporate.mp4"
+                        src={`${import.meta.env.BASE_URL}assets/abic-corporate.mp4`}
                     >
                         Your browser does not support the video tag.
                     </video>
