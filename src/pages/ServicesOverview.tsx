@@ -24,6 +24,17 @@ export default function ServicesOverview() {
                         color="text-blue-500 bg-blue-50"
                     />
                     <ServiceCard
+                        icon={<GraduationCap size={32} />}
+                        title="Student Services"
+                        desc="Specialized support for students in Waterloo & Guelph regions."
+                        links={[
+                            { label: "Waterloo Students", to: "/students/waterloo" },
+                            { label: "Guelph Students", to: "/students/guelph" },
+                            { label: "PGWP", to: "/students/waterloo/pgwp" }
+                        ]}
+                        color="text-green-500 bg-green-50"
+                    />
+                    <ServiceCard
                         icon={<Globe size={32} />}
                         title="Express Entry"
                         desc="Fast-track pathways for skilled workers to become Permanent Residents."
@@ -45,17 +56,7 @@ export default function ServicesOverview() {
                         ]}
                         color="text-pink-500 bg-pink-50"
                     />
-                    <ServiceCard
-                        icon={<GraduationCap size={32} />}
-                        title="Student Services"
-                        desc="Specialized support for students in Waterloo & Guelph regions."
-                        links={[
-                            { label: "Waterloo Students", to: "/students/waterloo" },
-                            { label: "Guelph Students", to: "/students/guelph" },
-                            { label: "PGWP", to: "/students/waterloo/pgwp" }
-                        ]}
-                        color="text-green-500 bg-green-50"
-                    />
+
                     <ServiceCard
                         icon={<Building2 size={32} />}
                         title="For Employers"

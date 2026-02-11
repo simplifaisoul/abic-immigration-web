@@ -17,6 +17,12 @@ const testimonials = [
         name: "Yusuf",
         role: "Business Immigration",
         video: "/assets/videos/testimonial-yusuf.mp4"
+    },
+    {
+        id: 4,
+        name: "Annabelle",
+        role: "Study Permit Extension",
+        video: "/assets/videos/testimonial-anabelle.mp4"
     }
 ];
 

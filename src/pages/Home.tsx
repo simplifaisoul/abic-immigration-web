@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { GraduationCap, FileCheck, Globe, ShieldAlert, BadgeCheck, PlayCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import VideoTestimonials from "../components/VideoTestimonials";
+import Testimonials from "../components/Testimonials";
 
 export default function Home() {
     return (
@@ -160,7 +161,10 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 6. CLIENT VIDEO TESTIMONIALS (Restored) */}
+            {/* 6. CLIENT TESTIMONIALS (Text) */}
+            <Testimonials />
+
+            {/* 7. CLIENT VIDEO TESTIMONIALS */}
             <VideoTestimonials />
 
             {/* 7. FINAL CTA */}
