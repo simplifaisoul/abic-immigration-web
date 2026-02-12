@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { GraduationCap, FileCheck, Globe, ShieldAlert, BadgeCheck, PlayCircle, Plane, Briefcase, Users, Building2, Gavel, Heart } from "lucide-react";
+import { GraduationCap, Globe, ShieldAlert, BadgeCheck, PlayCircle, Plane, Briefcase, Users, Building2, Gavel, Heart } from "lucide-react";
 import { motion } from "framer-motion";
 import VideoTestimonials from "../components/VideoTestimonials";
 import Testimonials from "../components/Testimonials";
@@ -75,10 +75,10 @@ export default function Home() {
                             color="bg-blue-600"
                         />
                         <QuickTile
-                            to="/services"
-                            icon={<FileCheck size={32} />}
-                            title="Student Services"
-                            desc="International & Local"
+                            to="/visitor-visa"
+                            icon={<Plane size={32} />}
+                            title="Visitor Visa (TRV)"
+                            desc="Applications & Extensions"
                             color="bg-blue-700"
                         />
                         <QuickTile

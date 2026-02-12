@@ -6,30 +6,34 @@ const testimonials = [
         id: 1,
         name: "Javier",
         role: "Permanent Resident",
-        video: `${import.meta.env.BASE_URL}assets/videos/testimonial-javier.mp4`
+        video: `${import.meta.env.BASE_URL}assets/videos/testimonial-javier.mp4`,
+        thumbnail: `${import.meta.env.BASE_URL}assets/testimonials/javier-thumb.jpg`
     },
     {
         id: 2,
         name: "Peng Yin",
         role: "Study Permit -> PGWP",
-        video: `${import.meta.env.BASE_URL}assets/videos/testimonial-peng-yin.mp4`
+        video: `${import.meta.env.BASE_URL}assets/videos/testimonial-peng-yin.mp4`,
+        thumbnail: `${import.meta.env.BASE_URL}assets/testimonials/peng-yin-thumb.jpg`
     },
     {
         id: 3,
         name: "Yusuf",
         role: "Business Immigration",
-        video: `${import.meta.env.BASE_URL}assets/videos/testimonial-yusuf.mp4`
+        video: `${import.meta.env.BASE_URL}assets/videos/testimonial-yusuf.mp4`,
+        thumbnail: `${import.meta.env.BASE_URL}assets/testimonials/yusuf-thumb.jpg`
     },
     {
         id: 4,
         name: "Annabelle",
         role: "Study Permit Extension",
-        video: `${import.meta.env.BASE_URL}assets/videos/testimonial-anabelle.mp4`
+        video: `${import.meta.env.BASE_URL}assets/videos/testimonial-anabelle.mp4`,
+        thumbnail: `${import.meta.env.BASE_URL}assets/testimonials/annabelle-thumb.jpg`
     }
 ];
 
 // Video Card Component
-const VideoCard = ({ testimonial }: { testimonial: { id: number; name: string; role: string; video: string } }) => {
+const VideoCard = ({ testimonial }: { testimonial: { id: number; name: string; role: string; video: string; thumbnail: string } }) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -41,11 +45,12 @@ const VideoCard = ({ testimonial }: { testimonial: { id: number; name: string; r
     };
 
     return (
-        <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-gray-900 aspect-[9/16]">
+        <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-gray-900 aspect-[9/16] max-w-xs mx-auto">
             <video
                 ref={videoRef}
                 src={testimonial.video}
                 controls={isPlaying}
+                poster={testimonial.thumbnail}
                 className={`w-full h-full object-cover transition-opacity duration-300 ${isPlaying ? 'opacity-100' : 'opacity-80'}`}
                 onPause={() => setIsPlaying(false)}
                 onEnded={() => setIsPlaying(false)}
@@ -85,7 +90,7 @@ export default function VideoTestimonials() {
                 </div>
 
                 {/* Corporate Video Feature */}
-                <div className="mb-20 rounded-3xl overflow-hidden shadow-2xl border border-gray-200 bg-black relative aspect-video max-w-5xl mx-auto">
+                <div className="mb-16 rounded-3xl overflow-hidden shadow-2xl border border-gray-200 bg-black relative aspect-video max-w-4xl mx-auto">
                     <video
                         className="w-full h-full object-cover"
                         controls
