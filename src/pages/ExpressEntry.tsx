@@ -1,6 +1,5 @@
 import ServiceLayout from "../components/ServiceLayout";
-import ServiceContent from "../components/ServiceContent";
-import { CheckCircle2, TrendingUp, Award, Briefcase } from "lucide-react";
+import { Award, TrendingUp, Wrench, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function ExpressEntry() {
@@ -12,112 +11,173 @@ export default function ExpressEntry() {
         >
             <div className="space-y-16">
 
-                <ServiceContent
-                    what="Express Entry is an online application management system used by Immigration, Refugees and Citizenship Canada (IRCC) to select candidates for permanent residence. It manages applications for the Federal Skilled Worker (FSW), Canadian Experience Class (CEC), and Federal Skilled Trades (FST) programs."
-                    who={[
-                        "Skilled workers with foreign or Canadian work experience",
-                        "International graduates from Canadian institutions",
-                        "Skilled tradespersons with valid job offers or certification",
-                        "Provincial Nominees (PNP holders)"
-                    ]}
-                    risks={[
-                        "Inaccurate CRS score calculation (claiming points for unverified education/work)",
-                        "Falling below the CRS cutoff score in a draw",
-                        "Misrepresentation (innocent mistakes can lead to a 5-year ban)",
-                        "Incomplete documents uploaded after recieving an ITA"
-                    ]}
-                />
-
-                {/* 1. FEDERAL SKILLED WORKER (FSW) */}
-                <section className="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="p-2 bg-abic-blue/10 rounded text-abic-blue"><Award size={24} /></div>
-                            <h3 className="text-2xl font-bold text-gray-900">Federal Skilled Worker (FSW)</h3>
-                        </div>
-                        <p className="text-gray-600 mb-6">
-                            Designed for workers with foreign work experience who want to immigrate to Canada permanently.
-                        </p>
-                        <h4 className="font-bold text-sm uppercase tracking-wide text-gray-500 mb-3">Eligibility Highlights</h4>
-                        <ul className="space-y-3">
-                            <li className="flex gap-3 text-sm text-gray-700"><CheckCircle2 className="text-green-500 shrink-0" size={18} /> At least 1 year of continuous work experience</li>
-                            <li className="flex gap-3 text-sm text-gray-700"><CheckCircle2 className="text-green-500 shrink-0" size={18} /> CLB 7 in English or French</li>
-                            <li className="flex gap-3 text-sm text-gray-700"><CheckCircle2 className="text-green-500 shrink-0" size={18} /> Score 67/100 on the selection factors</li>
-                        </ul>
-                    </div>
-                    <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                        <div className="text-center py-8">
-                            <div className="text-5xl font-bold text-abic-gold mb-2">67</div>
-                            <div className="text-sm font-bold text-gray-400 uppercase tracking-widest">Points Needed</div>
-                        </div>
-                        <Link to="/book-consultation" className="block w-full py-3 bg-gray-50 hover:bg-gray-100 text-center rounded-xl text-abic-blue font-bold transition-colors">
-                            Calculate My Score
-                        </Link>
-                    </div>
-                </section>
-
-                <hr className="border-gray-100" />
-
-                {/* 2. CANADIAN EXPERIENCE CLASS (CEC) */}
-                <section className="grid md:grid-cols-2 gap-12 items-center">
-                    <div className="order-2 md:order-1 bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                        <div className="text-center py-8">
-                            <div className="text-5xl font-bold text-abic-red mb-2">1 Yr</div>
-                            <div className="text-sm font-bold text-gray-400 uppercase tracking-widest">Canadian Experience</div>
-                        </div>
-                        <Link to="/book-consultation" className="block w-full py-3 bg-gray-50 hover:bg-gray-100 text-center rounded-xl text-abic-blue font-bold transition-colors">
-                            Verify Eligibility
-                        </Link>
-                    </div>
-                    <div className="order-1 md:order-2">
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="p-2 bg-abic-red/10 rounded text-abic-red"><TrendingUp size={24} /></div>
-                            <h3 className="text-2xl font-bold text-gray-900">Canadian Experience Class (CEC)</h3>
-                        </div>
-                        <p className="text-gray-600 mb-6">
-                            For skilled workers who have Canadian work experience and want to become permanent residents. Popular among international graduates.
-                        </p>
-                        <h4 className="font-bold text-sm uppercase tracking-wide text-gray-500 mb-3">Eligibility Highlights</h4>
-                        <ul className="space-y-3">
-                            <li className="flex gap-3 text-sm text-gray-700"><CheckCircle2 className="text-green-500 shrink-0" size={18} /> 1 year of skilled work in Canada (last 3 years)</li>
-                            <li className="flex gap-3 text-sm text-gray-700"><CheckCircle2 className="text-green-500 shrink-0" size={18} /> CLB 7 (TEER 0/1) or CLB 5 (TEER 2/3)</li>
-                            <li className="flex gap-3 text-sm text-gray-700"><CheckCircle2 className="text-green-500 shrink-0" size={18} /> Must be admissible to Canada</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <hr className="border-gray-100" />
-
-                {/* 3. FEDERAL SKILLED TRADES (FST) */}
+                {/* Overview */}
                 <section>
-                    <div className="flex items-center gap-3 mb-6">
-                        <div className="p-2 bg-abic-gold/10 rounded text-yellow-600"><Briefcase size={24} /></div>
-                        <h3 className="text-2xl font-bold text-gray-900">Federal Skilled Trades (FST)</h3>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-6">What is Express Entry?</h2>
+                    <p className="text-gray-600 leading-relaxed mb-6">
+                        Express Entry is an online application management system used by Immigration, Refugees and Citizenship Canada (IRCC) to select candidates for permanent residence. It manages applications for three federal economic immigration programs:
+                    </p>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
+                            <Award className="text-abic-blue mb-3" size={32} />
+                            <h3 className="font-bold text-gray-900 mb-2">Federal Skilled Worker</h3>
+                            <p className="text-sm text-gray-600">For skilled workers with foreign work experience</p>
+                        </div>
+                        <div className="bg-red-50 p-6 rounded-xl border border-red-100">
+                            <TrendingUp className="text-abic-red mb-3" size={32} />
+                            <h3 className="font-bold text-gray-900 mb-2">Canadian Experience Class</h3>
+                            <p className="text-sm text-gray-600">For workers with Canadian work experience</p>
+                        </div>
+                        <div className="bg-yellow-50 p-6 rounded-xl border border-yellow-100">
+                            <Wrench className="text-yellow-600 mb-3" size={32} />
+                            <h3 className="font-bold text-gray-900 mb-2">Federal Skilled Trades</h3>
+                            <p className="text-sm text-gray-600">For qualified tradespersons</p>
+                        </div>
                     </div>
-                    <div className="bg-gray-50 p-8 rounded-2xl">
-                        <p className="text-gray-600 mb-6 leading-relaxed">
-                            For skilled workers who are qualified in a skilled trade and want to become permanent residents. Requires a valid job offer or a certificate of qualification.
-                        </p>
-                        <div className="grid md:grid-cols-3 gap-6">
-                            <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                                <h5 className="font-bold text-gray-900 mb-2">Experience</h5>
-                                <p className="text-sm text-gray-500">2 years full-time in trade (last 5 years)</p>
+                </section>
+
+                <hr className="border-gray-100" />
+
+                {/* How It Works */}
+                <section>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-6">How Express Entry Works</h2>
+                    <div className="space-y-4">
+                        <div className="flex gap-4 items-start">
+                            <div className="w-10 h-10 bg-abic-blue text-white rounded-full flex items-center justify-center font-bold shrink-0">1</div>
+                            <div>
+                                <h4 className="font-bold text-gray-900">Create Your Profile</h4>
+                                <p className="text-sm text-gray-600">Submit your profile to the Express Entry pool. You'll be ranked using the Comprehensive Ranking System (CRS).</p>
                             </div>
-                            <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                                <h5 className="font-bold text-gray-900 mb-2">Job Offer</h5>
-                                <p className="text-sm text-gray-500">Valid full-time offer (1 year) OR Certificate</p>
+                        </div>
+                        <div className="flex gap-4 items-start">
+                            <div className="w-10 h-10 bg-abic-blue text-white rounded-full flex items-center justify-center font-bold shrink-0">2</div>
+                            <div>
+                                <h4 className="font-bold text-gray-900">Receive an Invitation to Apply (ITA)</h4>
+                                <p className="text-sm text-gray-600">If your CRS score is above the cutoff in a draw, you'll receive an ITA.</p>
                             </div>
-                            <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                                <h5 className="font-bold text-gray-900 mb-2">Language</h5>
-                                <p className="text-sm text-gray-500">CLB 5 (Speaking/Listening), CLB 4 (Reading/Writing)</p>
+                        </div>
+                        <div className="flex gap-4 items-start">
+                            <div className="w-10 h-10 bg-abic-blue text-white rounded-full flex items-center justify-center font-bold shrink-0">3</div>
+                            <div>
+                                <h4 className="font-bold text-gray-900">Submit Your Application</h4>
+                                <p className="text-sm text-gray-600">You have 60 days to submit a complete application with all supporting documents.</p>
                             </div>
+                        </div>
+                        <div className="flex gap-4 items-start">
+                            <div className="w-10 h-10 bg-abic-gold text-abic-blue rounded-full flex items-center justify-center font-bold shrink-0">4</div>
+                            <div>
+                                <h4 className="font-bold text-gray-900">Get Your PR</h4>
+                                <p className="text-sm text-gray-600">Most applications are processed within 6 months.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr className="border-gray-100" />
+
+                {/* Choose Your Program */}
+                <section>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Choose Your Program</h2>
+                    <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                        Each program has different eligibility requirements. Click on a program below to learn more and see if you qualify.
+                    </p>
+
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {/* Federal Skilled Worker */}
+                        <Link to="/express-entry/federal-skilled-worker" className="bg-white border-2 border-gray-200 hover:border-abic-blue p-8 rounded-2xl transition-all group hover:shadow-xl">
+                            <div className="flex items-center justify-between mb-4">
+                                <div className="p-3 bg-blue-50 rounded-lg text-abic-blue group-hover:bg-abic-blue group-hover:text-white transition-colors">
+                                    <Award size={32} />
+                                </div>
+                                <ArrowRight className="text-gray-400 group-hover:text-abic-blue group-hover:translate-x-1 transition-all" size={24} />
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-abic-blue transition-colors">Federal Skilled Worker</h3>
+                            <p className="text-sm text-gray-600 mb-4">
+                                For skilled professionals with foreign work experience. No job offer required.
+                            </p>
+                            <ul className="space-y-2 text-sm text-gray-600">
+                                <li className="flex gap-2"><CheckCircle2 className="text-green-500 shrink-0" size={16} /> 1+ year work experience</li>
+                                <li className="flex gap-2"><CheckCircle2 className="text-green-500 shrink-0" size={16} /> CLB 7 language requirement</li>
+                                <li className="flex gap-2"><CheckCircle2 className="text-green-500 shrink-0" size={16} /> 67/100 selection points</li>
+                            </ul>
+                        </Link>
+
+                        {/* Canadian Experience Class */}
+                        <Link to="/express-entry/canadian-experience-class" className="bg-white border-2 border-gray-200 hover:border-abic-red p-8 rounded-2xl transition-all group hover:shadow-xl">
+                            <div className="flex items-center justify-between mb-4">
+                                <div className="p-3 bg-red-50 rounded-lg text-abic-red group-hover:bg-abic-red group-hover:text-white transition-colors">
+                                    <TrendingUp size={32} />
+                                </div>
+                                <ArrowRight className="text-gray-400 group-hover:text-abic-red group-hover:translate-x-1 transition-all" size={24} />
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-abic-red transition-colors">Canadian Experience Class</h3>
+                            <p className="text-sm text-gray-600 mb-4">
+                                For international graduates and workers with Canadian experience. Popular PGWP → PR pathway.
+                            </p>
+                            <ul className="space-y-2 text-sm text-gray-600">
+                                <li className="flex gap-2"><CheckCircle2 className="text-green-500 shrink-0" size={16} /> 1 year Canadian experience</li>
+                                <li className="flex gap-2"><CheckCircle2 className="text-green-500 shrink-0" size={16} /> CLB 5-7 (depends on NOC)</li>
+                                <li className="flex gap-2"><CheckCircle2 className="text-green-500 shrink-0" size={16} /> No education requirement</li>
+                            </ul>
+                        </Link>
+
+                        {/* Federal Skilled Trades */}
+                        <Link to="/express-entry/skilled-trades" className="bg-white border-2 border-gray-200 hover:border-yellow-600 p-8 rounded-2xl transition-all group hover:shadow-xl">
+                            <div className="flex items-center justify-between mb-4">
+                                <div className="p-3 bg-yellow-50 rounded-lg text-yellow-600 group-hover:bg-yellow-600 group-hover:text-white transition-colors">
+                                    <Wrench size={32} />
+                                </div>
+                                <ArrowRight className="text-gray-400 group-hover:text-yellow-600 group-hover:translate-x-1 transition-all" size={24} />
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-yellow-600 transition-colors">Federal Skilled Trades</h3>
+                            <p className="text-sm text-gray-600 mb-4">
+                                For qualified tradespersons with job offers or provincial certification.
+                            </p>
+                            <ul className="space-y-2 text-sm text-gray-600">
+                                <li className="flex gap-2"><CheckCircle2 className="text-green-500 shrink-0" size={16} /> 2 years trade experience</li>
+                                <li className="flex gap-2"><CheckCircle2 className="text-green-500 shrink-0" size={16} /> Job offer OR certificate</li>
+                                <li className="flex gap-2"><CheckCircle2 className="text-green-500 shrink-0" size={16} /> CLB 4-5 language requirement</li>
+                            </ul>
+                        </Link>
+                    </div>
+                </section>
+
+                <hr className="border-gray-100" />
+
+                {/* Common Risks */}
+                <section>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-6">Common Risks & Mistakes</h2>
+                    <div className="grid md:grid-cols-2 gap-6">
+                        <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-xl">
+                            <h4 className="font-bold text-gray-900 mb-2">Inaccurate CRS Score Calculation</h4>
+                            <p className="text-sm text-gray-600">
+                                Claiming points for unverified education or work experience can lead to misrepresentation and a 5-year ban.
+                            </p>
+                        </div>
+                        <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-xl">
+                            <h4 className="font-bold text-gray-900 mb-2">Incomplete Documentation</h4>
+                            <p className="text-sm text-gray-600">
+                                Missing reference letters, police certificates, or medical exams can result in refusal or delays.
+                            </p>
+                        </div>
+                        <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-xl">
+                            <h4 className="font-bold text-gray-900 mb-2">Falling Below CRS Cutoff</h4>
+                            <p className="text-sm text-gray-600">
+                                Recent draws have ranged from 470-540 points. We help you maximize your score through language improvement, PNPs, or additional credentials.
+                            </p>
+                        </div>
+                        <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-xl">
+                            <h4 className="font-bold text-gray-900 mb-2">Missing the 60-Day Deadline</h4>
+                            <p className="text-sm text-gray-600">
+                                After receiving an ITA, you have only 60 days to submit a complete application. Preparation is key.
+                            </p>
                         </div>
                     </div>
                 </section>
 
                 {/* CTA */}
-                <div className="bg-abic-blue text-center p-12 rounded-2xl relative overflow-hidden text-white mt-12">
-                    <h2 className="text-3xl font-bold font-montserrat mb-4 relative z-10">Maximize Your CRS Score</h2>
+                <div className="bg-abic-blue text-center p-12 rounded-2xl relative overflow-hidden text-white">
+                    <h2 className="text-3xl font-bold mb-4 relative z-10">Maximize Your CRS Score</h2>
                     <p className="max-w-xl mx-auto text-blue-100 mb-8 relative z-10">
                         Small mistakes can cost you points. We review your profile to suggest improvements (Language, Education, PNP) that can secure your ITA.
                     </p>

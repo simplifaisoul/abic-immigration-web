@@ -23,7 +23,10 @@ import { StudyApplication, StudyExtension, StudyRefusals } from "./pages/study";
 import { WorkPermitOverview, WorkPermitExtension, PGWP, WorkPermit } from "./pages/work-permit";
 
 // Express Entry
-import { FSW, CEC, FST, ExpressEntry } from "./pages/express-entry";
+import ExpressEntry from "./pages/ExpressEntry";
+import FederalSkilledWorker from "./pages/express-entry/FederalSkilledWorker";
+import CanadianExperienceClass from "./pages/express-entry/CanadianExperienceClass";
+import SkilledTrades from "./pages/express-entry/SkilledTrades";
 
 // PR & Citizenship
 import { PR, Citizenship, PRCitizenship } from "./pages/pr-citizenship";
@@ -102,9 +105,9 @@ function App() {
           <Route path="/work-permit" element={<WorkPermit />} />
 
           {/* Services - Express Entry */}
-          <Route path="/express-entry/fsw" element={<FSW />} />
-          <Route path="/express-entry/cec" element={<CEC />} />
-          <Route path="/express-entry/fst" element={<FST />} />
+          <Route path="/express-entry/federal-skilled-worker" element={<FederalSkilledWorker />} />
+          <Route path="/express-entry/canadian-experience-class" element={<CanadianExperienceClass />} />
+          <Route path="/express-entry/skilled-trades" element={<SkilledTrades />} />
           <Route path="/express-entry" element={<ExpressEntry />} />
 
           {/* Services - PR & Citizenship */}

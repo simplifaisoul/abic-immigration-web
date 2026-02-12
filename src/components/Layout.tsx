@@ -184,7 +184,7 @@ export const Footer = () => (
                             ></iframe>
                         </div>
                         <p className="text-xs text-gray-400">
-                            130 Dundas St E Unit 303<br />Mississauga, ON L5A 1W7
+                            7111 Syntex Drive, 3rd Floor<br />Mississauga, ON L5N 8C3
                         </p>
                     </div>
 

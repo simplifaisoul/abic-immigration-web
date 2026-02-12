@@ -54,30 +54,30 @@ export default function OurPractice() {
 
                 {/* 1. INTRO & MIGRATION EXPERIENCE */}
                 <section className="space-y-12">
-                    <div className="flex flex-col md:flex-row gap-10 items-start">
+                    <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-center md:items-start">
                         {/* Photo & Badge */}
                         <div className="w-full md:w-1/3 shrink-0 space-y-6">
                             <img
                                 src={`${import.meta.env.BASE_URL}assets/anthony-professional.jpg`}
                                 alt="Anthony Wai Kean Cheah, RCIC"
-                                className="w-full rounded-2xl shadow-xl border-4 border-white"
+                                className="w-full max-w-sm md:max-w-none mx-auto rounded-2xl shadow-xl border-4 border-white"
                             />
                             <div className="bg-gray-50 p-6 rounded-2xl text-center border border-gray-100 shadow-sm">
-                                <p className="font-bold text-xl text-abic-blue font-montserrat">Anthony Wai Kean Cheah</p>
-                                <p className="text-gray-500 font-medium">RCIC (R511743)</p>
+                                <p className="font-bold text-lg md:text-xl text-abic-blue font-montserrat">Anthony Wai Kean Cheah</p>
+                                <p className="text-gray-500 font-medium text-sm md:text-base">RCIC (R511743)</p>
                                 <p className="text-xs text-gray-400 mt-2 uppercase tracking-wide font-bold">Principal Consultant & Director</p>
                             </div>
                             <div className="flex justify-center">
-                                <img src={`${import.meta.env.BASE_URL}assets/cicc-logo-new.png`} alt="CICC Regulated" className="h-32 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+                                <img src={`${import.meta.env.BASE_URL}assets/cicc-logo-new.png`} alt="CICC Regulated" className="h-24 md:h-32 object-contain opacity-90 hover:opacity-100 transition-opacity" />
                             </div>
                         </div>
 
                         {/* Immigration Practice Experience */}
-                        <div className="flex-1 space-y-8">
+                        <div className="flex-1 space-y-6 md:space-y-8 w-full">
                             <div>
-                                <h2 className="text-3xl font-bold text-gray-900 font-montserrat mb-4">Immigration & Academic Experience</h2>
-                                <h3 className="text-xl text-abic-blue font-semibold mb-4">Immigration Practice Experience</h3>
-                                <p className="text-gray-600 leading-relaxed mb-6">
+                                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-montserrat mb-3 md:mb-4">Immigration & Academic Experience</h2>
+                                <h3 className="text-lg md:text-xl text-abic-blue font-semibold mb-3 md:mb-4">Immigration Practice Experience</h3>
+                                <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4 md:mb-6">
                                     Anthony Cheah brings a deep, practice-driven understanding of Canadian immigration law and procedures, developed through years of advising clients across a wide range of temporary and permanent residence pathways. His work is grounded in regulatory compliance, risk assessment, and strategic planning, rather than transactional or volume-based processing.
                                 </p>
                                 <div className="space-y-2">
@@ -101,8 +101,8 @@ export default function OurPractice() {
                                         <p>Including visitor visas, extensions, refusals, and compliance matters. These cases often require careful assessment of travel history, purpose of visit, financial documentation, and ties to the home country.</p>
                                     </ExperienceItem>
                                 </div>
-                                <p className="mt-6 text-gray-700 font-medium italic border-l-4 border-abic-blue pl-4 py-2 bg-blue-50 rounded-r-lg">
-                                    "Across all categories, Anthony’s role is not limited to form preparation. His work centers on explaining the law, assessing risk, identifying gaps, and guiding clients through compliant decision-making."
+                                <p className="mt-4 md:mt-6 text-sm md:text-base text-gray-700 font-medium italic border-l-4 border-abic-blue pl-4 py-2 bg-blue-50 rounded-r-lg">
+                                    "Across all categories, Anthony's role is not limited to form preparation. His work centers on explaining the law, assessing risk, identifying gaps, and guiding clients through compliant decision-making."
                                 </p>
                             </div>
                         </div>
