@@ -10,7 +10,7 @@ const TopUtilityBar = () => (
         <div className="container mx-auto flex justify-between items-center">
             {/* Social Icons - Top Left */}
             <div className="flex space-x-4 items-center">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-abic-gold transition-colors" aria-label="Facebook">
+                <a href="https://www.facebook.com/abicrcic/" target="_blank" rel="noopener noreferrer" className="hover:text-abic-gold transition-colors" aria-label="Facebook">
                     <Facebook size={16} />
                 </a>
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-abic-gold transition-colors" aria-label="Instagram">
@@ -22,7 +22,7 @@ const TopUtilityBar = () => (
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-abic-gold transition-colors" aria-label="LinkedIn">
                     <Linkedin size={16} />
                 </a>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-abic-gold transition-colors" aria-label="YouTube">
+                <a href="https://www.youtube.com/watch?v=JUKfqThwvHw" target="_blank" rel="noopener noreferrer" className="hover:text-abic-gold transition-colors" aria-label="YouTube">
                     <Youtube size={16} />
                 </a>
             </div>
@@ -62,7 +62,7 @@ export const Header = () => {
         { name: "About", path: "/about/our-practice" },
         { name: "Services", path: "/services" },
         { name: "Students", path: "/students" },
-        { name: "Fees", path: "/fees" },
+        { name: "Consultation", path: "/fees" },
         { name: "Resources", path: "/resources" },
         { name: "Contact", path: "/contact" },
     ];
@@ -98,16 +98,16 @@ export const Header = () => {
 
                     {/* Social Media Icons */}
                     <div className="flex items-center gap-4 ml-6">
-                        <a href="#" className="text-gray-600 hover:text-abic-blue transition-colors" aria-label="Facebook">
+                        <a href="https://www.facebook.com/abicrcic/" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-abic-blue transition-colors" aria-label="Facebook">
                             <Facebook size={20} />
                         </a>
-                        <a href="#" className="text-gray-600 hover:text-abic-blue transition-colors" aria-label="Instagram">
+                        <a href="https://www.instagram.com" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-abic-blue transition-colors" aria-label="Instagram">
                             <Instagram size={20} />
                         </a>
-                        <a href="#" className="text-gray-600 hover:text-abic-blue transition-colors" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-abic-blue transition-colors" aria-label="LinkedIn">
                             <Linkedin size={20} />
                         </a>
-                        <a href="#" className="text-gray-600 hover:text-abic-blue transition-colors" aria-label="YouTube">
+                        <a href="https://www.youtube.com/watch?v=JUKfqThwvHw" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-abic-blue transition-colors" aria-label="YouTube">
                             <Youtube size={20} />
                         </a>
 

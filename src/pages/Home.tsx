@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { GraduationCap, Globe, ShieldAlert, BadgeCheck, PlayCircle, Plane, Briefcase, Users, Building2, Gavel, Heart } from "lucide-react";
+import { GraduationCap, Globe, BadgeCheck, PlayCircle, Plane, Briefcase, Users, Building2, Gavel, Heart } from "lucide-react";
 import { motion } from "framer-motion";
 import VideoTestimonials from "../components/VideoTestimonials";
 import Testimonials from "../components/Testimonials";
@@ -68,31 +68,31 @@ export default function Home() {
                 <div className="container mx-auto px-4">
                     <div className="grid md:grid-cols-4 gap-6 -mt-32 relative z-20">
                         <QuickTile
-                            to="/students"
-                            icon={<GraduationCap size={32} />}
-                            title="Student Services"
-                            desc="Waterloo & Guelph Hubs"
-                            color="bg-blue-600"
-                        />
-                        <QuickTile
                             to="/visitor-visa"
                             icon={<Plane size={32} />}
                             title="Visitor Visa (TRV)"
                             desc="Applications & Extensions"
+                            color="bg-blue-600"
+                        />
+                        <QuickTile
+                            to="/students"
+                            icon={<GraduationCap size={32} />}
+                            title="Student Services"
+                            desc="International Support"
                             color="bg-blue-700"
                         />
                         <QuickTile
-                            to="/services"
+                            to="/express-entry"
                             icon={<Globe size={32} />}
                             title="Express Entry & PR"
                             desc="Pathways to Permanence"
                             color="bg-blue-800"
                         />
                         <QuickTile
-                            to="/services"
-                            icon={<ShieldAlert size={32} />}
-                            title="Refusals & Appeals"
-                            desc="Expert Case Review"
+                            to="/family-sponsorship"
+                            icon={<Users size={32} />}
+                            title="Family Sponsorship"
+                            desc="Reunite with Loved Ones"
                             color="bg-blue-900"
                         />
                     </div>
@@ -104,11 +104,11 @@ export default function Home() {
 
                         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
                             <ServiceCard title="Visitor Visa" icon={<Plane size={40} className="text-abic-blue" />} link="/visitor-visa" />
-                            <ServiceCard title="Study Permit" icon={<GraduationCap size={40} className="text-abic-blue" />} link="/study-in-canada" />
-                            <ServiceCard title="Work Permit / PGWP" icon={<Briefcase size={40} className="text-abic-blue" />} link="/work-permit" />
+                            <ServiceCard title="Student Services" icon={<GraduationCap size={40} className="text-abic-blue" />} link="/students" />
                             <ServiceCard title="Express Entry" icon={<Globe size={40} className="text-abic-blue" />} link="/express-entry" />
                             <ServiceCard title="Family Sponsorship" icon={<Users size={40} className="text-abic-blue" />} link="/family-sponsorship" />
-                            <ServiceCard title="LMIA Services" icon={<Building2 size={40} className="text-abic-blue" />} link="/employers-lmia" />
+                            <ServiceCard title="Employer Services" icon={<Building2 size={40} className="text-abic-blue" />} link="/employers-lmia" />
+                            <ServiceCard title="Work Permit / PGWP" icon={<Briefcase size={40} className="text-abic-blue" />} link="/work-permit" />
                             <ServiceCard title="Refusals & Appeals" icon={<Gavel size={40} className="text-abic-blue" />} link="/visitor-visa/refusals" />
                             <ServiceCard title="H&C Applications" icon={<Heart size={40} className="text-abic-blue" />} link="/pr-citizenship" />
                         </div>

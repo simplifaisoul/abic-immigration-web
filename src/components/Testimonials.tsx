@@ -77,7 +77,7 @@ export default function Testimonials() {
                             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-abic-blue to-abic-gold rounded-t-3xl"></div>
                             <StarRating />
                             <Quote size={40} className="text-gray-100 absolute top-8 right-8" />
-                            <p className="text-lg text-gray-700 italic mb-6 relative z-10">"{t.text}"</p>
+                            <p className="text-lg text-gray-800 font-medium italic mb-6 relative z-10">"{t.text}"</p>
                             <div className="mt-auto">
                                 <div className="font-bold text-gray-900">{t.name}</div>
                                 <div className="text-sm text-gray-500">({t.year})</div>
@@ -98,7 +98,7 @@ export default function Testimonials() {
                                 className="flex-shrink-0 w-80 md:w-96 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm snap-center"
                             >
                                 <StarRating />
-                                <p className="text-gray-600 mb-4 h-24 overflow-y-auto text-sm leading-relaxed">"{t.text}"</p>
+                                <p className="text-gray-800 font-medium mb-4 h-24 overflow-y-auto text-sm leading-relaxed">"{t.text}"</p>
                                 <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
                                     <div className="w-8 h-8 bg-blue-50 text-abic-blue rounded-full flex items-center justify-center font-bold text-xs">
                                         {t.name[0]}
